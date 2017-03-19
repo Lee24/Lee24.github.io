@@ -1,15 +1,12 @@
 ---
-layout: page
-title: About
-permalink: /about/
+layout: default_without_cate
+title: "关于：About"
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+## 个人简介：
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
+* 李梓成
+* 大数据应用开发工程师
+* 深圳
+* 邮箱: li.zicheng@qq.com
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
