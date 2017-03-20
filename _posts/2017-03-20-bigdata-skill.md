@@ -9,5 +9,6 @@ tags:		[skill,data science]
 
 大数据工程师必备技能图谱&大数据技术生态
 
-![](/datascience/bigdataengineerskill.PNG)
-![](/datascience/Hadoop.PNG)
+![](/images/datascience/bigdataengineerskill.PNG)
+
+![](/images/datascience/Hadoop.PNG)
