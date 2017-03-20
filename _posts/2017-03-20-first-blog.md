@@ -4,7 +4,7 @@ title:      新的开始
 keywords:   begin
 category:   Life
 description: 初步搭建博客后的第一篇文章
-tags:		[新的开始]
+tags:		[生活]
 ---
 
 
