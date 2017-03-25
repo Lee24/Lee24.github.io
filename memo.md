@@ -12,8 +12,10 @@ Memo
 备忘：
 
 >1. markdown笔记：马克飞象 Typora
+>2. 没有数据的话，下载和学习spark并没有什么意义，所以第一步应该是用python爬数据
 
-
+实验楼：
+python爬虫入门
 
 优秀博客
 
