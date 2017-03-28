@@ -7,6 +7,9 @@ Memo
 
 	1. 每周写一篇博客总结本周的事情和感悟，最好能贴一些照片
 	2. 要有一个戒烟的计划
+	3. 既然是白纸，就应该要有白纸的样子
+	4. 提醒自己，自己并不是那么OK
+	5. 要真正的幽默，注意掉入烂俗和套路的陷阱
 
 
 备忘：
@@ -19,6 +22,6 @@ python爬虫入门
 
 优秀博客
 
-	1. EZLippi-浮生志 <http://www.ezlippi.com/>
-	   Blogcode  <https://github.com/EZLippi/EZLippi.github.io>
+1. <a href="http://www.ezlippi.com/">EZLippi-浮生志</a>
+<a href="https://github.com/EZLippi/EZLippi.github.io">Blogcode</a>
 
