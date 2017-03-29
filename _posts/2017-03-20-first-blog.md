@@ -2,7 +2,7 @@
 layout:     post
 title:      新的开始
 keywords:   begin
-category:   Life
+category:   LIFE
 description: 初步搭建博客后的第一篇文章
 tags:		[生活]
 ---
