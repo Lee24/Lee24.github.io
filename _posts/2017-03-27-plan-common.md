@@ -2,7 +2,6 @@
 layout:     post
 title:      2017.4.5.6计划
 category:   PLAN
-description:
 tags:		[PLAN]
 ---
 工作日:
