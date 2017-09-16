@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="baidu-site-verification" content="HvuxptDcq6"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Markdown - Lee24 - chenglee(li.zicheng@qq.com)">
+    <title>
+        Markdown - Lee24
+    </title>
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS 
+    <link href="/css/blog.css" rel="stylesheet">-->
+    <!-- index css -->
+    <link href="/css/index.css" rel="stylesheet">
+    <!-- pagments CSS-->
+    <link href="/css/pygments.css" rel="stylesheet">
+    <!-- jQuery Version 1.11.0 -->
+    <script src="/js/jquery-1.11.0.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- 回到顶部js-->
+    <script src="/js/index.js"></script>
+
+    <script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?085fc257cb1e774f7764a2cf527c393d";
+	  var s = document.getElementsByTagName("script")[0];
+	  s.parentNode.insertBefore(hm, s);
+	})();
+
+    </script>
+
+    <script>
+    (function(){
+     var bp = document.createElement('script');
+	 bp.src = '//push.zhanzhang.baidu.com/push.js';
+	 var s = document.getElementsByTagName("script")[0];
+	 s.parentNode.insertBefore(bp, s);
+	 })();
+    </script>
+
+</head>
+
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">
+              Toggle navigation
+            </span>
+                <span class="icon-bar">
+            </span>
+                <span class="icon-bar">
+            </span>
+                <span class="icon-bar">
+            </span>
+            </button>
+            <a class="navbar-brand" href="/index.html">
+                Lee24
+            </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+    <li>
+        <a href="/categories.html">
+            分 类
+        </a>
+    </li>
+    <li>
+        <a href="/tags.html">
+            标 签
+        </a>
+    </li>
+    <li>
+        <a href="/archives.html">
+            归 档
+        </a>
+    </li>
+    <li>
+        <a href="/taskList.html">
+            任 务
+        </a>
+    </li>
+    <li>
+        <a href="/memo.html">
+            备 忘
+        </a>
+    </li>
+    <li>
+        <a href="/about.html">
+            关 于
+        </a>
+    </li>
+</ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <div id="top" data-toggle="tooltip" data-placement="left" title="回到顶部">
+            <a href="javascript:;">
+                <div class="arrow"></div>
+                <div class="stick"></div>
+            </a>
+        </div>
+
+
+        <!-- Blog Entries Column -->
+        <div class="col-md-12">
+            <!-- Blog Post -->
+<!-- Title -->
+<div class="row">
+    <div class="post-area post">
+
+        <div class="post-list-body">
+            <div class="all-posts" post-cate="All">
+                <header>
+                    <h1>
+                        Markdown
+                        <div class="post-date">
+                            <!--<a-->
+                            <!--href="https://github.com/Lee24/Lee24.github.io/edit/master/_posts/2017-03-29-markdown.md"-->
+                            <!--target="_blank">纠错</a>&nbsp;&nbsp;-->
+                            <span class="glyphicon glyphicon-time"></span>
+                            29 Mar 2017
+                        </div>
+                    </h1>
+                </header>
+                <!-- Author -->
+                <hr>
+                <article>
+                    <h1 id="markdown常用语法">markdown常用语法</h1>
+
+<h2 id="段落">段落</h2>
+<p>markdown的段落由空行组成，当存在空行时就会划分出不同的段落。<br />
+若需要在段落内换行，在行末加入1个以上的空格即可</p>
+
+<h2 id="标题">标题</h2>
+<ul>
+  <li>用一个或多个 <strong>=</strong> 作为<strong>底线</strong>则表示该行为最高阶标题</li>
+  <li>用一个或多个 <strong>-</strong> 作为<strong>底线</strong>则表示该行为第二阶标题</li>
+  <li>在首行一1到6个 <strong>#</strong> 对应到标题的1到6阶。需要注意的是，井号后最后跟上一个空格，否则某些markdown的解析器有可能解析不了</li>
+</ul>
+
+<h2 id="区块代码">区块&amp;代码</h2>
+<h4 id="区块">区块</h4>
+<p>以<strong>&gt;</strong>开头则表示该段为一个区块，效果如下所示：</p>
+<blockquote>
+  <p>这是一个区块</p>
+</blockquote>
+
+<h4 id="代码">代码</h4>
+<p>书写格式如下所示：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>```python
+def process():
+    tepm  = set()
+    
+    file = 'F:/process/enb.csv'
+    file2 = 'F:/process/enbOk.csv'
+
+    f2 = open(file2, '+r', encoding='utf-8')
+    f = open('poem.txt')
+    for line in open('poem.txt'):
+        line = f.readline()
+        arr = line.split('|')
+        value = arr[9] + ',' + arr[4] + '\n'
+        file2.write(value)
+    f.close()
+    f2.close()
+```
+</code></pre>
+</div>
+
+<p>显示效果如下所示：</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">process</span><span class="p">():</span>
+    <span class="n">tepm</span>  <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    
+    <span class="nb">file</span> <span class="o">=</span> <span class="s">'F:/process/enb.csv'</span>
+    <span class="n">file2</span> <span class="o">=</span> <span class="s">'F:/process/enbOk.csv'</span>
+
+    <span class="n">f2</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file2</span><span class="p">,</span> <span class="s">'+r'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'poem.txt'</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s">'poem.txt'</span><span class="p">):</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+        <span class="n">arr</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">'|'</span><span class="p">)</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">+</span> <span class="s">','</span> <span class="o">+</span> <span class="n">arr</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span>
+        <span class="n">file2</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">f2</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<h2 id="强调和修辞">强调和修辞</h2>
+<p>makdown以四个星号或四个下划线(_)作为强调，以每边两个的形式括住要强调的字符；以两个星号或下划线每边一个的形式括住相关字符的话，该字符会变成斜体，如下所示。</p>
+
+<ul>
+  <li><strong>星号强调</strong></li>
+  <li><strong>下划线强调</strong></li>
+  <li><em>星号斜体</em></li>
+  <li><em>下划线斜体</em></li>
+</ul>
+
+<h2 id="列表">列表</h2>
+<p>以* + - 作为行的开头并紧跟一个空格，可生成项目标记形成一个无序列表，如下所示</p>
+
+<ul>
+  <li>无序列表1</li>
+  <li>无序列表2</li>
+  <li>无序列表3</li>
+</ul>
+
+<p>以数字加英文句号开头即可形成一个有序列表，如下所示</p>
+
+<ol>
+  <li>有序列表1</li>
+  <li>有序列表2</li>
+  <li>有序列表3</li>
+</ol>
+
+<h2 id="链接">链接</h2>
+<p>链接分为行内链接和参考链接，如下所示</p>
+
+<h4 id="行内链接">行内链接</h4>
+<blockquote>
+  <p><code class="highlighter-rouge">This is an [example link](http://example.com/ "With a Title").</code></p>
+</blockquote>
+
+<h4 id="参考链接">参考链接</h4>
+<div class="highlighter-rouge"><pre class="highlight"><code>I get 10 times more traffic from [Google][1] than from
+[Yahoo][2] or [MSN][3].    
+
+[1]: http://google.com/ "Google"
+[2]: http://search.yahoo.com/ "Yahoo Search"
+[3]: http://search.msn.com/ "MSN Search"
+</code></pre>
+</div>
+
+<h2 id="图片">图片</h2>
+<p>语法和链接很像，也分为行内和参考，不同的是图片的引用在中括号前要加一个感叹号。  <br />
+此外，中括号里的内容为html中img标签里的alt属性  <br />
+<img src="/images/tools/zoro.png" alt="zoro" title="zoro" /></p>
+
+<hr />
+<h2 id="参考资料">参考资料</h2>
+<ul>
+  <li><a href="http://www.ezlippi.com/blog/2014/07/markdown-basics.html">《markdown 快速入门》</a></li>
+</ul>
+
+                </article>
+                <hr>
+                <br/>
+                <!--<p>-->
+                <!--本作品由 <a href="mailto:li.zicheng@qq.com">chenglee</a> 创作，采用-->
+                <!--<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="查看协议详细信息"-->
+                <!--target="_blank">CC BY-NC-SA 3.0 许可协议</a>-->
+                <!--进行许可。-->
+                <!--</p>-->
+                <div style="margin-top:10px;margin-bottom:10px">
+                    
+                    <span class="next">
+	    上篇：
+	    <a href="/blog/2017/03/plan-common.html">
+	      2017.4.5.6计划
+	    </a>
+	  </span>
+                    
+                    
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- Blog Comments -->
+    <!--<div class="media">-->
+        <!--{ include comment.html }-->
+    <!--</div>-->
+</div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- /.row -->
+    <hr>
+    <!-- Footer -->
+    <footer>
+        <footer>
+    <p>
+        <small>Lee24 Reboot 2017.3 - 2017.03</small>
+        &nbsp
+        <small> When all else is lost the future still remains.</small>
+    </p>
+
+    <div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
+      opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
+        <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 60px" placeholder="文章标题 日期 标签" >
+
+        <div style="position: fixed; top: 16px; right: 16px;">
+            <img src="/search/img/cb-close.png"  id="cb-close-btn"/>
+        </div>
+    </div>
+
+    <div style="position: fixed; right: 16px; bottom: 20px;">
+        <img src="/search/img/cb-search.png"  id="cb-search-btn"  title="双击ctrl试一下"/>
+    </div>
+
+    <link rel="stylesheet" href="/search/css/cb-search.css">
+
+    <script src="/search/js/bootstrap3-typeahead.min.js"></script>
+    <script src="/search/js/cb-search.js"></script>
+</footer>
+
+    </footer>
+</div>
+<!-- /.container -->
+</body>
+
+</html>

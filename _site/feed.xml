@@ -1,0 +1,1203 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-03-29T20:59:22+08:00</updated><id>http://localhost:4000/</id><title type="html">Lee24</title><subtitle>When all else is lost the future still remains.</subtitle><author><name>chenglee</name></author><entry><title type="html">Markdown</title><link href="http://localhost:4000/blog/2017/03/markdown.html" rel="alternate" type="text/html" title="Markdown" /><published>2017-03-29T00:00:00+08:00</published><updated>2017-03-29T00:00:00+08:00</updated><id>http://localhost:4000/blog/2017/03/markdown</id><content type="html" xml:base="http://localhost:4000/blog/2017/03/markdown.html">&lt;h1 id=&quot;markdown常用语法&quot;&gt;markdown常用语法&lt;/h1&gt;
+
+&lt;h2 id=&quot;段落&quot;&gt;段落&lt;/h2&gt;
+&lt;p&gt;markdown的段落由空行组成，当存在空行时就会划分出不同的段落。&lt;br /&gt;
+若需要在段落内换行，在行末加入1个以上的空格即可&lt;/p&gt;
+
+&lt;h2 id=&quot;标题&quot;&gt;标题&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;用一个或多个 &lt;strong&gt;=&lt;/strong&gt; 作为&lt;strong&gt;底线&lt;/strong&gt;则表示该行为最高阶标题&lt;/li&gt;
+  &lt;li&gt;用一个或多个 &lt;strong&gt;-&lt;/strong&gt; 作为&lt;strong&gt;底线&lt;/strong&gt;则表示该行为第二阶标题&lt;/li&gt;
+  &lt;li&gt;在首行一1到6个 &lt;strong&gt;#&lt;/strong&gt; 对应到标题的1到6阶。需要注意的是，井号后最后跟上一个空格，否则某些markdown的解析器有可能解析不了&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;区块代码&quot;&gt;区块&amp;amp;代码&lt;/h2&gt;
+&lt;h4 id=&quot;区块&quot;&gt;区块&lt;/h4&gt;
+&lt;p&gt;以&lt;strong&gt;&amp;gt;&lt;/strong&gt;开头则表示该段为一个区块，效果如下所示：&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;这是一个区块&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;代码&quot;&gt;代码&lt;/h4&gt;
+&lt;p&gt;书写格式如下所示：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```python
+def process():
+    tepm  = set()
+    
+    file = 'F:/process/enb.csv'
+    file2 = 'F:/process/enbOk.csv'
+
+    f2 = open(file2, '+r', encoding='utf-8')
+    f = open('poem.txt')
+    for line in open('poem.txt'):
+        line = f.readline()
+        arr = line.split('|')
+        value = arr[9] + ',' + arr[4] + '\n'
+        file2.write(value)
+    f.close()
+    f2.close()
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;显示效果如下所示：&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;tepm&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    
+    &lt;span class=&quot;nb&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'F:/process/enb.csv'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;file2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'F:/process/enbOk.csv'&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;f2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'+r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'utf-8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'poem.txt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'poem.txt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'|'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;','&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;file2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;f2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;强调和修辞&quot;&gt;强调和修辞&lt;/h2&gt;
+&lt;p&gt;makdown以四个星号或四个下划线(_)作为强调，以每边两个的形式括住要强调的字符；以两个星号或下划线每边一个的形式括住相关字符的话，该字符会变成斜体，如下所示。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;星号强调&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;下划线强调&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;星号斜体&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;下划线斜体&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;列表&quot;&gt;列表&lt;/h2&gt;
+&lt;p&gt;以* + - 作为行的开头并紧跟一个空格，可生成项目标记形成一个无序列表，如下所示&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;无序列表1&lt;/li&gt;
+  &lt;li&gt;无序列表2&lt;/li&gt;
+  &lt;li&gt;无序列表3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;以数字加英文句号开头即可形成一个有序列表，如下所示&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;有序列表1&lt;/li&gt;
+  &lt;li&gt;有序列表2&lt;/li&gt;
+  &lt;li&gt;有序列表3&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;链接&quot;&gt;链接&lt;/h2&gt;
+&lt;p&gt;链接分为行内链接和参考链接，如下所示&lt;/p&gt;
+
+&lt;h4 id=&quot;行内链接&quot;&gt;行内链接&lt;/h4&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;This is an [example link](http://example.com/ &quot;With a Title&quot;).&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;参考链接&quot;&gt;参考链接&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I get 10 times more traffic from [Google][1] than from
+[Yahoo][2] or [MSN][3].    
+
+[1]: http://google.com/ &quot;Google&quot;
+[2]: http://search.yahoo.com/ &quot;Yahoo Search&quot;
+[3]: http://search.msn.com/ &quot;MSN Search&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;图片&quot;&gt;图片&lt;/h2&gt;
+&lt;p&gt;语法和链接很像，也分为行内和参考，不同的是图片的引用在中括号前要加一个感叹号。  &lt;br /&gt;
+此外，中括号里的内容为html中img标签里的alt属性  &lt;br /&gt;
+&lt;img src=&quot;/images/tools/zoro.png&quot; alt=&quot;zoro&quot; title=&quot;zoro&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;参考资料&quot;&gt;参考资料&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.ezlippi.com/blog/2014/07/markdown-basics.html&quot;&gt;《markdown 快速入门》&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>chenglee</name></author><category term="TOOLS" /><summary type="html">markdown常用语法</summary></entry><entry><title type="html">2017.4.5.6计划</title><link href="http://localhost:4000/blog/2017/03/plan-common.html" rel="alternate" type="text/html" title="2017.4.5.6计划" /><published>2017-03-27T00:00:00+08:00</published><updated>2017-03-27T00:00:00+08:00</updated><id>http://localhost:4000/blog/2017/03/plan-common</id><content type="html" xml:base="http://localhost:4000/blog/2017/03/plan-common.html">&lt;p&gt;工作日:
+11点准时睡。睡前看半小时书
+7点起床（第一周不实施）&lt;/p&gt;
+
+&lt;p&gt;7点至8点半背单词 + 读一篇英语文章&lt;/p&gt;
+
+&lt;p&gt;8:30 ~ 17:30 认真上班，期间完成以下事情：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;抽一个小时看书&lt;/li&gt;
+  &lt;li&gt;背三次单词&lt;/li&gt;
+  &lt;li&gt;每天抽一个半小时看scala书&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;6:30-11:00  四个半小时  * 0.8 = 216分钟 = 3.5小时
+半小时锻炼
+二十分钟写日记
+2.5小时，项目加大数据、人工智能技术
+复习单词&lt;/p&gt;
+
+&lt;p&gt;周六：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;主要用于学习关键技术，等学习计划和项目完善之后再完善&lt;/li&gt;
+  &lt;li&gt;休息时骑车到外面散步，顺便完成骑车任务&lt;/li&gt;
+  &lt;li&gt;制定下一周的计划（细致，目标明确，执行性强）&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;周日：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;本周收尾工作，如果当前周完成得很好，即可以放假&lt;/li&gt;
+  &lt;li&gt;完成骑车任务&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;英语：每天背30个单词 周日不用背，但是需要复习一遍，每四周一个周期，同周期内复习当前周期的单词。
+每天阅读一篇英语文章&lt;/p&gt;
+
+&lt;p&gt;锻炼： 每天50个俯卧撑、50个仰卧起坐  【形成表格】可用跑步三公里代替
+	   每周骑车50公里（除上班外）【形成表格】&lt;/p&gt;
+
+&lt;p&gt;IT：
+	人工智能：（后续细化）实验楼有dl常用框架入门
+	编程技能： scala   《快学scala》3月份
+					《scala函数式编程》
+			  python  《python核心编程》
+	大数据技术  spark hadoop生态
+	项目：后续确定。写项目计划&lt;/p&gt;
+
+&lt;p&gt;阅读：每周一本书（第一周除外）&lt;/p&gt;
+
+&lt;p&gt;生活&amp;amp;rule：
+	每天都要写笔记。
+	每周制定下周细致计划及目标
+	每周只能看一场比赛
+	戒烟：第一阶段：每天最多只能抽三根烟
+		第二阶段：每天破坏一根烟，破坏完再买一包，破坏到戒掉为止&lt;/p&gt;
+
+&lt;p&gt;第一阶段[7至10天]：学习目标（完成第一阶段后细化学习及项目计划）&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;在家里的电脑安装spark&lt;/li&gt;
+  &lt;li&gt;在家里电脑搭建应用运行环境&lt;/li&gt;
+  &lt;li&gt;python图片转字符画&lt;/li&gt;
+  &lt;li&gt;了解大数据生态， 指定大数据学习目标及计划&lt;/li&gt;
+  &lt;li&gt;了解人工智能，指定学习路线&lt;/li&gt;
+  &lt;li&gt;确定项目计划&lt;/li&gt;
+  &lt;li&gt;制作相关表格，计划和实行可视化&lt;/li&gt;
+  &lt;li&gt;整理拉钩，确定大致发展路线&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;备忘：
+coursera
+实验楼
+ted&lt;/p&gt;
+
+&lt;p&gt;备忘：
+买东西：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;鞋&lt;/li&gt;
+  &lt;li&gt;裤子&lt;/li&gt;
+  &lt;li&gt;牙刷 考虑&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;反思： 其实生活还可以很有趣，心态要放开，心态一定要放开，让自己看得更远一点&lt;/p&gt;</content><author><name>chenglee</name></author><category term="PLAN" /><category term="PLAN" /><summary type="html">工作日: 11点准时睡。睡前看半小时书 7点起床（第一周不实施）</summary></entry><entry><title type="html">机器学习——Andrew NG</title><link href="http://localhost:4000/blog/2017/03/machinelearning-coursera.html" rel="alternate" type="text/html" title="机器学习——Andrew NG" /><published>2017-03-25T00:00:00+08:00</published><updated>2017-03-25T00:00:00+08:00</updated><id>http://localhost:4000/blog/2017/03/machinelearning-coursera</id><content type="html" xml:base="http://localhost:4000/blog/2017/03/machinelearning-coursera.html">&lt;p&gt;第一周：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;机器学习例子：
+    &lt;ol&gt;
+      &lt;li&gt;Database mining 数据库挖掘&lt;/li&gt;
+      &lt;li&gt;自然语言处理&lt;/li&gt;
+      &lt;li&gt;计算机视觉&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;写出一个让直升机自主飞行的程序几乎是不可能的，唯一可行的方法是让程序自己去学会如何驾驭直升机&lt;/li&gt;
+  &lt;li&gt;机器学习分类：
+    &lt;ol&gt;
+      &lt;li&gt;supervised learning 监督学习&lt;/li&gt;
+      &lt;li&gt;unsupervised learning 无监督学习
+        &lt;ol&gt;
+          &lt;li&gt;聚类算法&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;机器学习处理的问题类型:
+    &lt;ol&gt;
+      &lt;li&gt;classification 分类问题  输出为离散数据集&lt;/li&gt;
+      &lt;li&gt;regression problem 回归问题 输出为连续数据集&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;模型分类：
+    &lt;ol&gt;
+      &lt;li&gt;线性回归模型 （linear regression）&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;训练模型中的相关概念：
+    &lt;ol&gt;
+      &lt;li&gt;代价函数  （cost function）
+        &lt;ol&gt;
+          &lt;li&gt;平方误差函数，适合回归问题&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;梯度下降算法(gradient descent)：用于使代价函数最小化&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;轮廓图（contour plot 或 contour figure）用于表现代价函数&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Q&amp;amp;A:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;梯度下降算法只能得到局部最优解&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>chenglee</name></author><category term="MOOC" /><category term="coursera" /><summary type="html">第一周：</summary></entry><entry><title type="html">从零开始掌握Python机器学习：十四步教程</title><link href="http://localhost:4000/blog/2017/03/steps-of-ml.html" rel="alternate" type="text/html" title="从零开始掌握Python机器学习：十四步教程" /><published>2017-03-21T00:00:00+08:00</published><updated>2017-03-21T00:00:00+08:00</updated><id>http://localhost:4000/blog/2017/03/steps-of-ml</id><content type="html" xml:base="http://localhost:4000/blog/2017/03/steps-of-ml.html">&lt;p&gt;转自：https://zhuanlan.zhihu.com/p/25761248&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://pic1.zhimg.com/v2-0a37c6040e9e7dd88449da697d196578_r.jpg&quot; alt=&quot;从零开始掌握Python机器学习：十四步教程&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;从零开始掌握python机器学习十四步教程&quot;&gt;从零开始掌握Python机器学习：十四步教程&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Python 可以说是现在最流行的机器学习语言，而且你也能在网上找到大量的资源。你现在也在考虑从 Python 入门机器学习吗？本教程或许能帮你成功上手，从 0 到 1 掌握 Python 机器学习，至于后面再从 1 到 100 变成机器学习专家，就要看你自己的努力了。本教程原文分为两个部分，机器之心在本文中将其进行了整合，原文可参阅：7 Steps to Mastering Machine Learning With Python 和 7 More Steps to Mastering Machine Learning With Python。本教程的作者为 KDnuggets 副主编兼数据科学家 Matthew Mayo。&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;「开始」往往是最难的，尤其是当选择太多的时候，一个人往往很难下定决定做出选择。本教程的目的是帮助几乎没有 Python 机器学习背景的新手成长为知识渊博的实践者，而且这个过程中仅需要使用免费的材料和资源即可。这个大纲的主要目标是带你了解那些数量繁多的可用资源。毫无疑问，资源确实有很多，但哪些才是最好的呢？哪些是互补的呢？以怎样的顺序学习这些资源才是最合适的呢？&lt;/p&gt;
+
+&lt;p&gt;首先，我假设你并不是以下方面的专家：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;机器学习&lt;/li&gt;
+  &lt;li&gt;Python&lt;/li&gt;
+  &lt;li&gt;任何 Python 的机器学习、科学计算或数据分析库&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;当然，如果你对前两个主题有一定程度的基本了解就更好了，但那并不是必要的，在早期阶段多花一点点时间了解一下就行了。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;基础篇&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;第一步：基本 Python 技能&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;如果我们打算利用 Python 来执行机器学习，那么对 Python 有一些基本的了解就是至关重要的。幸运的是，因为 Python 是一种得到了广泛使用的通用编程语言，加上其在科学计算和机器学习领域的应用，所以找到一个初学者教程并不十分困难。你在 Python 和编程上的经验水平对于起步而言是至关重要的。&lt;/p&gt;
+
+&lt;p&gt;首先，你需要安装 Python。因为我们后面会用到科学计算和机器学习软件包，所以我建议你安装 Anaconda。这是一个可用于 Linux、OS X 和 Windows 上的工业级的 Python 实现，完整包含了机器学习所需的软件包，包括 numpy、scikit-learn 和 matplotlib。其也包含了 iPython Notebook，这是一个用在我们许多教程中的交互式环境。我推荐安装 Python 2.7。&lt;/p&gt;
+
+&lt;p&gt;如果你不懂编程，我建议你从下面的免费在线书籍开始学习，然后再进入后续的材料：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Learn Python the Hard Way，作者 Zed A. Shaw：&lt;a href=&quot;https://link.zhihu.com/?target=https%3A//learnpythonthehardway.org/book/&quot;&gt;Learn Python the Hard Way**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;如果你有编程经验，但不懂 Python 或还很初级，我建议你学习下面两个课程：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;谷歌开发者 Python 课程（强烈推荐视觉学习者学习）：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/toMzq&quot;&gt;http://suo.im/toMzq**&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Python 科学计算入门（来自 UCSB Engineering 的 M. Scott Shell）（一个不错的入门，大约有 60 页）：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/2cXycM&quot;&gt;http://suo.im/2cXycM**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;如果你要 30 分钟上手 Python 的快速课程，看下面：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在 Y 分钟内学会 X（X=Python）：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/zm6qX&quot;&gt;Learn python in Y Minutes**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;当然，如果你已经是一位经验丰富的 Python 程序员了，这一步就可以跳过了。即便如此，我也建议你常使用 Python 文档：&lt;a href=&quot;https://link.zhihu.com/?target=https%3A//www.python.org/doc/&quot;&gt;Welcome to Python.org**&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;第二步：机器学习基础技巧&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;KDnuggets 的 Zachary Lipton 已经指出：现在，人们评价一个「数据科学家」已经有很多不同标准了。这实际上是机器学习领域领域的一个写照，因为数据科学家大部分时间干的事情都牵涉到不同程度地使用机器学习算法。为了有效地创造和获得来自支持向量机的洞见，非常熟悉核方法（kernel methods）是否必要呢？当然不是。就像几乎生活中的所有事情一样，掌握理论的深度是与实践应用相关的。对机器学习算法的深度了解超过了本文探讨的范围，它通常需要你将非常大量的时间投入到更加学术的课程中去，或者至少是你自己要进行高强度的自学训练。&lt;/p&gt;
+
+&lt;p&gt;好消息是，对实践来说，你并不需要获得机器学习博士般的理论理解——就想要成为一个高效的程序员并不必要进行计算机科学理论的学习。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;人们对吴恩达在 Coursera 上的机器学习课程内容往往好评如潮；然而，我的建议是浏览前一个学生在线记录的课堂笔记。跳过特定于 Octave（一个类似于 Matlab 的与你 Python 学习无关的语言）的笔记。一定要明白这些都不是官方笔记，但是可以从它们中把握到吴恩达课程材料中相关的内容。当然如果你有时间和兴趣，你现在就可以去 Coursera 上学习吴恩达的机器学习课程：[Machine Learning - Stanford University&lt;/td&gt;
+      &lt;td&gt;Coursera**](https://link.zhihu.com/?target=http%3A//suo.im/2o1uD)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;吴恩达课程的非官方笔记：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//www.holehouse.org/mlclass/&quot;&gt;Machine Learning - complete course notes**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;除了上面提到的吴恩达课程，如果你还需要需要其它的，网上还有很多各类课程供你选择。比如我就很喜欢 Tom Mitchell，这里是他最近演讲的视频（一起的还有 Maria-Florina Balcan），非常平易近人。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Tom Mitchell 的机器学习课程：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/497arw&quot;&gt;Machine Learning**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;目前你不需要所有的笔记和视频。一个有效地方法是当你觉得合适时，直接去看下面特定的练习题，参考上述备注和视频恰当的部分，&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;第三步：科学计算 Python 软件包概述&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;好了，我们已经掌握了 Python 编程并对机器学习有了一定的了解。而在 Python 之外，还有一些常用于执行实际机器学习的开源软件库。广义上讲，有很多所谓的科学 Python 库（scientific Python libraries）可用于执行基本的机器学习任务（这方面的判断肯定有些主观性）：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;numpy——主要对其 N 维数组对象有用 &lt;a href=&quot;https://link.zhihu.com/?target=http%3A//www.numpy.org/&quot;&gt;NumPy - NumPy**&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;pandas——Python 数据分析库，包括数据框架（dataframes）等结构 &lt;a href=&quot;https://link.zhihu.com/?target=http%3A//pandas.pydata.org/&quot;&gt;Python Data Analysis Library**&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;matplotlib——一个 2D 绘图库，可产生出版物质量的图表 &lt;a href=&quot;https://link.zhihu.com/?target=http%3A//matplotlib.org/&quot;&gt;Python plotting - Matplotlib 2.0.0 documentation**&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;scikit-learn——用于数据分析和数据挖掘人物的机器学习算法 &lt;a href=&quot;https://link.zhihu.com/?target=http%3A//scikit-learn.org/stable/&quot;&gt;scikit-learn: machine learning in Python**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;学习这些库的一个好方法是学习下面的材料：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Scipy Lecture Notes，来自 Gaël Varoquaux、Emmanuelle Gouillart 和 Olav Vahtras：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//www.scipy-lectures.org/&quot;&gt;Scipy Lecture Notes**&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;​&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;这个 pandas 教程也很不错：10 Minutes to Pandas：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/4an6gY&quot;&gt;10 Minutes to pandas**&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在本教程的后面你还会看到一些其它的软件包，比如基于 matplotlib 的数据可视化库 Seaborn。前面提到的软件包只是 Python 机器学习中常用的一些核心库的一部分，但是理解它们应该能让你在后面遇到其它软件包时不至于感到困惑。&lt;/p&gt;
+
+&lt;p&gt;下面就开始动手吧！&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;第四步：使用 Python 学习机器学习&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;首先检查一下准备情况&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Python：就绪&lt;/li&gt;
+  &lt;li&gt;机器学习基本材料：就绪&lt;/li&gt;
+  &lt;li&gt;Numpy：就绪&lt;/li&gt;
+  &lt;li&gt;Pandas：就绪&lt;/li&gt;
+  &lt;li&gt;Matplotlib：就绪&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;现在是时候使用 Python 机器学习标准库 scikit-learn 来实现机器学习算法了。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;scikit-learn 流程图&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;下面许多的教程和训练都是使用 iPython (Jupyter) Notebook 完成的，iPython Notebook 是执行 Python 语句的交互式环境。iPython Notebook 可以很方便地在网上找到或下载到你的本地计算机。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;来自斯坦福的 iPython Notebook 概览：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//cs231n.github.io/ipython-tutorial/&quot;&gt;IPython Tutorial**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;同样也请注意，以下的教程是由一系列在线资源所组成。如果你感觉课程有什么不合适的，可以和作者交流。我们第一个教程就是从 scikit-learn 开始的，我建议你们在继续完成教程前可以按顺序看一看以下的文章。&lt;/p&gt;
+
+&lt;p&gt;下面是一篇是对 scikit-learn 简介的文章，scikit-learn 是 Python 最常用的通用机器学习库，其覆盖了 K 近邻算法：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Jake VanderPlas 写的 scikit-learn 简介：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/3bMdEd&quot;&gt;Jupyter Notebook Viewer**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;下面的会更加深入、扩展的一篇简介，包括了从著名的数据库开始完成一个项目：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Randal Olson 的机器学习案例笔记：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/RcPR6&quot;&gt;Jupyter Notebook Viewer**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;下一篇关注于在 scikit-learn 上评估不同模型的策略，包括训练集/测试集的分割方法：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Kevin Markham 的模型评估：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/2HIXDD&quot;&gt;justmarkham/scikit-learn-videos**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;第五步：Python 上实现机器学习的基本算法&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;在有了 scikit-learn 的基本知识后，我们可以进一步探索那些更加通用和实用的算法。我们从非常出名的 K 均值聚类（k-means clustering）算法开始，它是一种非常简单和高效的方法，能很好地解决非监督学习问题：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;K-均值聚类：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/40R8zf&quot;&gt;jakevdp/sklearn_pycon2015**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;接下来我们可以回到分类问题，并学习曾经最流行的分类算法：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;决策树：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//thegrimmscientist.com/tutorial-decision-trees/&quot;&gt;Tutorial: Decision Trees**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在了解分类问题后，我们可以继续看看连续型数值预测：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;线性回归：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/3EV4Qn&quot;&gt;Jupyter Notebook Viewer**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;我们也可以利用回归的思想应用到分类问题中，即 logistic 回归：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;logistic 回归：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/S2beL&quot;&gt;justmarkham/gadsdc**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;第六步：Python 上实现进阶机器学习算法&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;我们已经熟悉了 scikit-learn，现在我们可以了解一下更高级的算法了。首先就是支持向量机，它是一种依赖于将数据转换映射到高维空间的非线性分类器。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;支持向量机：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/2iZLLa&quot;&gt;jakevdp/sklearn_pycon2015**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;随后，我们可以通过 Kaggle Titanic 竞赛检查学习作为集成分类器的随机森林：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Kaggle Titanic 竞赛（使用随机森林）：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/1o7ofe&quot;&gt;Jupyter Notebook Viewer**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;降维算法经常用于减少在问题中所使用的变量。主成份分析法就是非监督降维算法的一个特殊形式：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;降维算法：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/2k5y2E&quot;&gt;jakevdp/sklearn_pycon2015**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在进入第七步之前，我们可以花一点时间考虑在相对较短的时间内取得的一些进展。&lt;/p&gt;
+
+&lt;p&gt;首先使用 Python 及其机器学习库，我们不仅已经了解了一些最常见和知名的机器学习算法（k 近邻、k 均值聚类、支持向量机等），还研究了强大的集成技术（随机森林）和一些额外的机器学习任务（降维算法和模型验证技术）。除了一些基本的机器学习技巧，我们已经开始寻找一些有用的工具包。&lt;/p&gt;
+
+&lt;p&gt;我们会进一步学习新的必要工具。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;第七步：Python 深度学习&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;神经网络包含很多层&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;深度学习无处不在。深度学习建立在几十年前的神经网络的基础上，但是最近的进步始于几年前，并极大地提高了深度神经网络的认知能力，引起了人们的广泛兴趣。如果你对神经网络还不熟悉，KDnuggets 有很多文章详细介绍了最近深度学习大量的创新、成就和赞许。&lt;/p&gt;
+
+&lt;p&gt;最后一步并不打算把所有类型的深度学习评论一遍，而是在 2 个先进的当代 Python 深度学习库中探究几个简单的网络实现。对于有兴趣深挖深度学习的读者，我建议从下面这些免费的在线书籍开始：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;神经网络与深度学习，作者 Michael Nielsen：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//neuralnetworksanddeeplearning.com/&quot;&gt;Neural networks and deep learning**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;1.Theano&lt;/p&gt;
+
+&lt;p&gt;链接：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//deeplearning.net/software/theano/&quot;&gt;Welcome - Theano 0.8.2 documentation**&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Theano 是我们讲到的第一个 Python 深度学习库。看看 Theano 作者怎么说：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Theano 是一个 Python 库，它可以使你有效地定义、优化和评估包含多维数组的数学表达式。&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;下面关于运用 Theano 学习深度学习的入门教程有点长，但是足够好，描述生动，评价很高：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Theano 深度学习教程，作者 Colin Raffel：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/1mPGHe&quot;&gt;Jupyter Notebook Viewer**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;2.Caffe&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;链接：[Caffe&lt;/td&gt;
+      &lt;td&gt;Deep Learning Framework**](https://link.zhihu.com/?target=http%3A//caffe.berkeleyvision.org/)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;另一个我们将测试驱动的库是 Caffe。再一次，让我们从作者开始：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Caffe 是一个深度学习框架，由表达、速度和模块性建构，Bwekeley 视觉与学习中心和社区工作者共同开发了 Caf fe。&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;这个教程是本篇文章中最好的一个。我们已经学习了上面几个有趣的样例，但没有一个可与下面这个样例相竞争，其可通过 Caffe 实现谷歌的 DeepDream。这个相当精彩！掌握教程之后，可以尝试使你的处理器自如运行，就当作是娱乐。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;通过 Caffe 实现谷歌 DeepDream：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/2cUSXS&quot;&gt;google/deepdream**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;我并没有保证说这会很快或容易，但是如果你投入了时间并完成了上面的 7 个步骤，你将在理解大量机器学习算法以及通过流行的库（包括一些在目前深度学习研究领域最前沿的库）在 Python 中实现算法方面变得很擅长。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;进阶篇&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;机器学习算法&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;本篇是使用 Python 掌握机器学习的 7 个步骤系列文章的下篇，如果你已经学习了该系列的上篇，那么应该达到了令人满意的学习速度和熟练技能；如果没有的话，你也许应该回顾一下上篇，具体花费多少时间，取决于你当前的理解水平。我保证这样做是值得的。快速回顾之后，本篇文章会更明确地集中于几个机器学习相关的任务集上。由于安全地跳过了一些基础模块——Python 基础、机器学习基础等等——我们可以直接进入到不同的机器学习算法之中。这次我们可以根据功能更好地分类教程。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;第1步：机器学习基础回顾&amp;amp;一个新视角&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;上篇中包括以下几步：&lt;/p&gt;
+
+&lt;p&gt;\1. Python 基础技能&lt;/p&gt;
+
+&lt;p&gt;\2. 机器学习基础技能&lt;/p&gt;
+
+&lt;p&gt;\3. Python 包概述&lt;/p&gt;
+
+&lt;p&gt;\4. 运用 Python 开始机器学习：介绍&amp;amp;模型评估&lt;/p&gt;
+
+&lt;p&gt;\5. 关于 Python 的机器学习主题：k-均值聚类、决策树、线性回归&amp;amp;逻辑回归&lt;/p&gt;
+
+&lt;p&gt;\6. 关于 Python 的高阶机器学习主题：支持向量机、随机森林、PCA 降维&lt;/p&gt;
+
+&lt;p&gt;\7. Python 中的深度学习&lt;/p&gt;
+
+&lt;p&gt;如上所述，如果你正准备从头开始，我建议你按顺序读完上篇。我也会列出所有适合新手的入门材料，安装说明包含在上篇文章中。&lt;/p&gt;
+
+&lt;p&gt;然而，如果你已经读过，我会从下面最基础的开始：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;机器学习关键术语解释，作者 Matthew Mayo。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/2URQGm&quot;&gt;Machine Learning Key Terms, Explained**&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;维基百科条目：统计学分类。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/mquen&quot;&gt;Statistical classification**&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;机器学习：一个完整而详细的概述，作者 Alex Castrounis。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/1yjSSq&quot;&gt;Machine Learning: A Complete and Detailed Overview**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;如果你正在寻找学习机器学习基础的替代或补充性方法，恰好我可以把正在看的 Shai Ben-David 的视频讲座和 Shai Shalev-Shwartz 的教科书推荐给你：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Shai Ben-David 的机器学习介绍视频讲座，滑铁卢大学。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/1TFlK6&quot;&gt;http://suo.im/1TFlK6**&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;理解机器学习：从理论到算法，作者 Shai Ben-David &amp;amp; Shai Shalev-Shwartz。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/1NL0ix&quot;&gt;http://suo.im/1NL0ix**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;记住，这些介绍性资料并不需要全部看完才能开始我写的系列文章。视频讲座、教科书及其他资源可在以下情况查阅：当使用机器学习算法实现模型时或者当合适的概念被实际应用在后续步骤之中时。具体情况自己判断。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;第2步：更多的分类&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;我们从新材料开始，首先巩固一下我们的分类技术并引入一些额外的算法。虽然本篇文章的第一部分涵盖决策树、支持向量机、逻辑回归以及合成分类随机森林，我们还是会添加 k-最近邻、朴素贝叶斯分类器和多层感知器。&lt;img src=&quot;https://pic2.zhimg.com/v2-a70e3a8a8430cd2c26f7f41c02d6f3a1_b.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Scikit-learn 分类器&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;k-最近邻（kNN）是一个简单分类器和懒惰学习者的示例，其中所有计算都发生在分类时间上（而不是提前在训练步骤期间发生）。kNN 是非参数的，通过比较数据实例和 k 最近实例来决定如何分类。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;使用 Python 进行 k-最近邻分类。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/2zqW0t&quot;&gt;K-Nearest Neighbor classification using python**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;朴素贝叶斯是基于贝叶斯定理的分类器。它假定特征之间存在独立性，并且一个类中任何特定特征的存在与任何其它特征在同一类中的存在无关。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;使用 Scikit-learn 进行文档分类，作者 Zac Stewart。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/2uwBm3&quot;&gt;Document Classification with scikit-learn**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;多层感知器（MLP）是一个简单的前馈神经网络，由多层节点组成，其中每个层与随后的层完全连接。多层感知器在 Scikit-learn 版本 0.18 中作了介绍。&lt;/p&gt;
+
+&lt;p&gt;首先从 Scikit-learn 文档中阅读 MLP 分类器的概述，然后使用教程练习实现。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;神经网络模型（监督式），Scikit-learn 文档。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/3oR76l&quot;&gt;1.17. Neural network models (supervised)**&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Python 和 Scikit-learn 的神经网络初学者指南 0.18！作者 Jose Portilla。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/2tX6rG&quot;&gt;A Beginner’s Guide to Neural Networks with Python and SciKit Learn 0.18!**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;第3步：更多聚类&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;我们现在接着讲聚类，一种无监督学习形式。上篇中，我们讨论了 k-means 算法; 我们在此介绍 DBSCAN 和期望最大化（EM）。&lt;img src=&quot;https://pic4.zhimg.com/v2-a74530f8e8752f4b0ceb5c10f01c5207_b.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Scikit-learn聚类算法&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;首先，阅读这些介绍性文章; 第一个是 k 均值和 EM 聚类技术的快速比较，是对新聚类形式的一个很好的继续，第二个是对 Scikit-learn 中可用的聚类技术的概述：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;聚类技术比较：简明技术概述，作者 Matthew Mayo。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/4ctIvI&quot;&gt;Comparing Clustering Techniques: A Concise Technical Overview**&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;在玩具数据集中比较不同的聚类算法，Scikit-learn 文档。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/4uvbbM&quot;&gt;Comparing different clustering algorithms on toy datasets**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;期望最大化（EM）是概率聚类算法，并因此涉及确定实例属于特定聚类的概率。EM 接近统计模型中参数的最大似然性或最大后验估计（Han、Kamber 和 Pei）。EM 过程从一组参数开始迭代直到相对于 k 聚类的聚类最大化。&lt;/p&gt;
+
+&lt;p&gt;首先阅读关于 EM 算法的教程。接下来，看看相关的 Scikit-learn 文档。最后，按照教程使用 Python 自己实现 EM 聚类。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;期望最大化（EM）算法教程，作者 Elena Sharova。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/33ukYd&quot;&gt;A Tutorial on the Expectation Maximization (EM) Algorithm**&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;高斯混合模型，Scikit-learn 文档。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/20C2tZ&quot;&gt;2.1. Gaussian mixture models**&lt;/a&gt;。&lt;/li&gt;
+  &lt;li&gt;使用 Python 构建高斯混合模型的快速介绍，作者 Tiago Ramalho。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/4oxFsj&quot;&gt;Quick introduction to gaussian mixture models with python**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;如果高斯混合模型初看起来令人困惑，那么来自 Scikit-learn 文档的这一相关部分应该可以减轻任何多余的担心：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;高斯混合对象实现期望最大化（EM）算法以拟合高斯模型混合。&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;基于密度且具有噪声的空间聚类应用（DBSCAN）通过将密集数据点分组在一起，并将低密度数据点指定为异常值来进行操作。&lt;/p&gt;
+
+&lt;p&gt;首先从 Scikit-learn 的文档中阅读并遵循 DBSCAN 的示例实现，然后按照简明的教程学习：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;DBSCAN 聚类算法演示，Scikit-learn 文档。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/1l9tvX&quot;&gt;Demo of DBSCAN clustering algorithm**&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;基于密度的聚类算法（DBSCAN）和实现。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/1LEoXC&quot;&gt;http://suo.im/1LEoXC**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;第4步：更多的集成方法&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;上篇只涉及一个单一的集成方法：随机森林（RF）。RF 作为一个顶级的分类器，在过去几年中取得了巨大的成功，但它肯定不是唯一的集成分类器。我们将看看包装、提升和投票。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;给我一个提升&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;首先，阅读这些集成学习器的概述，第一个是通用性的；第二个是它们与 Scikit-learn 有关：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;集成学习器介绍，作者 Matthew Mayo。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/cLESw&quot;&gt;Data Science Basics: An Introduction to Ensemble Learners**&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Scikit-learn 中的集成方法，Scikit-learn 文档。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/yFuY9&quot;&gt;1.11. Ensemble methods**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;然后，在继续使用新的集成方法之前，请通过一个新的教程快速学习随机森林：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Python 中的随机森林，来自 Yhat。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/2eujI&quot;&gt;Random Forests in Python**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;包装、提升和投票都是不同形式的集成分类器，全部涉及建构多个模型; 然而，这些模型由什么算法构建，模型使用的数据，以及结果如何最终组合起来，这些都会随着方案而变化。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;包装：从同一分类算法构建多个模型，同时使用来自训练集的不同（独立）数据样本——Scikit-learn 实现包装分类器&lt;/li&gt;
+  &lt;li&gt;提升：从同一分类算法构建多个模型，一个接一个地链接模型，以提高每个后续模型的学习——Scikit-learn 实现 AdaBoost&lt;/li&gt;
+  &lt;li&gt;投票：构建来自不同分类算法的多个模型，并且使用标准来确定模型如何最好地组合——Scikit-learn 实现投票分类器&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;那么，为什么要组合模型？为了从一个特定角度处理这个问题，这里是偏差-方差权衡的概述，具体涉及到提升，以下是 Scikit-learn 文档：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;单一评估器 vs 包装：偏差-方差分解，Scikit-learn 文档。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/3izlRB&quot;&gt;http://suo.im/3izlRB**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;现在你已经阅读了关于集成学习器的一些介绍性材料，并且对几个特定的集成分类器有了基本了解，下面介绍如何从 Machine Learning Mastery 中使用 Scikit-learn 在 Python 中实现集成分类器：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;使用 Scikit-learn 在 Python 中实现集成机器学习算法，作者 Jason Brownlee。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/9WEAr&quot;&gt;Ensemble Machine Learning Algorithms in Python with scikit-learn - Machine Learning Mastery**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;第5步：梯度提升&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;下一步我们继续学习集成分类器，探讨一个当代最流行的机器学习算法。梯度提升最近在机器学习中产生了显著的影响，成为了 Kaggle 竞赛中最受欢迎和成功的算法之一。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;给我一个梯度提升&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;首先，阅读梯度提升的概述：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;维基百科条目：梯度提升。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/TslWi&quot;&gt;http://suo.im/TslWi**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;接下来，了解为什么梯度提升是 Kaggle 竞赛中「最制胜」的方法：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;为什么梯度提升完美解决了诸多 Kaggle 难题？Quora，地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/3rS6ZO&quot;&gt;Why does Gradient boosting work so well for so many Kaggle problems?**&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Kaggle 大师解释什么是梯度提升，作者 Ben Gorman。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/3nXlWR&quot;&gt;A Kaggle Master Explains Gradient Boosting**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;虽然 Scikit-learn 有自己的梯度提升实现，我们将稍作改变，使用 XGBoost 库，我们提到过这是一个更快的实现。&lt;/p&gt;
+
+&lt;p&gt;以下链接提供了 XGBoost 库的一些额外信息，以及梯度提升（出于必要）：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;维基百科条目：XGBoost。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/2UlJ3V&quot;&gt;Xgboost - Wikipedia**&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Ghub 上的 XGBoost 库。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/2JeQI8&quot;&gt;dmlc/xgboost**&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;XGBoost 文档。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/QRRrm&quot;&gt;Introduction to Boosted Trees**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;现在，按照这个教程把所有汇聚起来：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Python 中 XGBoost 梯度提升树的实现指南，作者 Jesse Steinweg-Woods。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/4FTqD5&quot;&gt;A Guide to Gradient Boosted Trees with XGBoost in Python**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;你还可以按照这些更简洁的示例进行强化：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;XGBoost 在 Kaggle 上的示例（Python）。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/4F9A1J&quot;&gt;Titanic: Machine Learning from Disaster**&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Iris 数据集和 XGBoost 简单教程，作者 Ieva Zarina。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/2Lyb1a&quot;&gt;Iris Dataset and Xgboost Simple Tutorial**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;第6步：更多的降维&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;降维是通过使用过程来获得一组主变量，将用于模型构建的变量从其初始数减少到一个减少数。&lt;/p&gt;
+
+&lt;p&gt;有两种主要形式的降维：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\1. 特征选择——选择相关特征的子集。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/4wlkrj&quot;&gt;Feature selection**&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;\2. 特征提取——构建一个信息性和非冗余的衍生值特征集。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/3Gf0Yw&quot;&gt;Feature extraction**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;下面是一对常用的特征提取方法。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;主成分分析（PCA）是一种统计步骤，它使用正交变换将可能相关变量的一组观测值转换为一组称为主成分的线性不相关变量值。主成分的数量小于或等于原始变量的数量。这种变换以这样的方式定义，即第一主成分具有最大可能的方差（即考虑数据中尽可能多的变率）&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;以上定义来自 PCA 维基百科条目，如果感兴趣可进一步阅读。但是，下面的概述/教程非常彻底：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;主成分分析：3 个简单的步骤，作者 Sebastian Raschka。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/1ahFdW&quot;&gt;Principal Component Analysis**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;线性判别分析（LDA）是 Fisher 线性判别的泛化，是统计学、模式识别和机器学习中使用的一种方法，用于发现线性组合特征或分离两个或多个类别的对象或事件的特征。所得到的组合可以用作线性分类器，或者更常见地，用作后续分类之前的降维。&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;LDA 与方差分析（ANOVA）和回归分析密切相关，它同样尝试将一个因变量表示为其他特征或测量的线性组合。然而，ANOVA 使用分类独立变量和连续因变量，而判别分析具有连续的独立变量和分类依赖变量（即类标签）。&lt;/p&gt;
+
+&lt;p&gt;上面的定义也来自维基百科。下面是完整的阅读：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;线性判别分析——直至比特，作者 Sebastian Raschka。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/gyDOb&quot;&gt;Linear Discriminant Analysis**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;你对 PCA 和 LDA 对于降维的实际差异是否感到困惑？Sebastian Raschka 做了如下澄清：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;线性判别分析（LDA）和主成分分析（PCA）都是通常用于降维的线性转换技术。PCA 可以被描述为「无监督」算法，因为它「忽略」类标签，并且其目标是找到使数据集中的方差最大化的方向（所谓的主成分）。与 PCA 相反，LDA 是「监督的」并且计算表示使多个类之间的间隔最大化的轴的方向（「线性判别式」）。&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;有关这方面的简要说明，请阅读以下内容：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;LDA 和 PCA 之间的降维有什么区别？作者 Sebastian Raschka。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/2IPt0U&quot;&gt;Machine Learning FAQ**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;第 7 步：更多的深度学习&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;上篇中提供了一个学习神经网络和深度学习的入口。如果你的学习到目前比较顺利并希望巩固对神经网络的理解，并练习实现几个常见的神经网络模型，那么请继续往下看。&lt;/p&gt;
+
+&lt;p&gt;首先，看一些深度学习基础材料：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;深度学习关键术语及解释，作者 Matthew Mayo&lt;/li&gt;
+  &lt;li&gt;理解深度学习的 7 个步骤，作者 Matthew Mayo。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/3QmEfV&quot;&gt;7 Steps to Understanding Deep Learning**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;接下来，在 Google 的机器智能开源软件库 TensorFlow（一个有效的深度学习框架和现今几乎是最好的神经网络工具）尝试一些简明的概述／教程：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//mp.weixin.qq.com/s%3F__biz%3DMzA3MzI4MjgzMw%3D%3D%26mid%3D2650718466%26idx%3D1%26sn%3D016f111001e8354d49dd4ce279d283cd%26scene%3D21%23wechat_redirect&quot;&gt;机器学习敲门砖：任何人都能看懂的 TensorFlow 介绍**&lt;/a&gt;（第 1、2 部分）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//mp.weixin.qq.com/s%3F__biz%3DMzA3MzI4MjgzMw%3D%3D%26mid%3D2650723520%26idx%3D1%26sn%3Dd204284574e9e56682b6ed6f9dcaff01%26chksm%3D871b10beb06c99a8ccb990b5299b4a2b2c6b7bdcf2b21813f294ed09c838f7ff03e94191c682%26scene%3D21%23wechat_redirect&quot;&gt;入门级解读：小白也能看懂的 TensorFlow 介绍**&lt;/a&gt;（第 3、4 部分）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;最后，直接从 TensorFlow 网站试用这些教程，它实现了一些最流行和常见的神经网络模型：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;循环神经网络，谷歌 TensorFlow 教程。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/2gtkze&quot;&gt;http://suo.im/2gtkze**&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;卷积神经网络，谷歌 TensorFlow 教程。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/g8Lbg&quot;&gt;http://suo.im/g8Lbg**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;此外，目前一篇关于 7 个步骤掌握深度学习的文章正在写作之中，重点介绍使用位于 TensorFlow 顶部的高级 API，以增模型实现的容易性和灵活性。我也将在完成后在这儿添加一个链接。&lt;/p&gt;
+
+&lt;p&gt;相关的：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;进入机器学习行业之前应该阅读的 5 本电子书。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/SlZKt&quot;&gt;5 EBooks to Read Before Getting into A Machine Learning Career**&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;理解深度学习的 7 个步骤。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/3QmEfV&quot;&gt;7 Steps to Understanding Deep Learning**&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;机器学习关键术语及解释。地址：&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//suo.im/2URQGm&quot;&gt;Machine Learning Key Terms, Explained**&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;选自kdnuggets（&lt;a href=&quot;https://link.zhihu.com/?target=http%3A//www.kdnuggets.com/2017/03/seven-more-steps-machine-learning-python.html/2&quot;&gt;1&lt;strong&gt;](https://link.zhihu.com/?target=http%3A//www.kdnuggets.com/2015/11/seven-steps-machine-learning-python.html)）（[2&lt;/strong&gt;&lt;/a&gt;） &lt;strong&gt;机器之心编译&lt;/strong&gt;&lt;/p&gt;</content><author><name>chenglee</name></author><category term="MachineLearning" /><category term="机器学习" /><category term="python" /><category term="转载" /><summary type="html">转自：https://zhuanlan.zhihu.com/p/25761248</summary></entry><entry><title type="html">新的开始</title><link href="http://localhost:4000/blog/2017/03/first-blog.html" rel="alternate" type="text/html" title="新的开始" /><published>2017-03-20T00:00:00+08:00</published><updated>2017-03-20T00:00:00+08:00</updated><id>http://localhost:4000/blog/2017/03/first-blog</id><content type="html" xml:base="http://localhost:4000/blog/2017/03/first-blog.html">&lt;p&gt;这两天一直在搭建自己的博客，说起来像是有点舍本逐末，因为现在对于我来说博客似乎是可有可无的，但是一旦想起要学点什么东西的时候总是无从下手，一来需要学的知识太多了，二来是很久很久没有学东西了，这两天慢慢的有点找到了当时学习的感觉。希望慢慢进入状态吧，今天粗略看了一些博客模板的那个博主的文章，感觉人家真的懂很多学了很多东西，而我这两年真的几乎什么都没有去学，像个三不像，不是个合格的工程师也没有找到自己想要的样子，希望一切都慢慢变好，人生有高有低，希望通过自己的努力找回自己原来的样子。&lt;/p&gt;
+
+&lt;p&gt;本来有挺多东西想要说的，但是今天实在已经很累了，腰酸背痛的，洗澡睡觉吧，明天继续努力，告诉自己，自己是一张白纸，一切从头开始，就当自己是刚刚毕业的大学生，力拼生活。 这篇文章作为一切东西开头的象征，单薄了点，找时间再好好写写吧。&lt;/p&gt;</content><author><name>chenglee</name></author><category term="Life" /><category term="生活" /><summary type="html">这两天一直在搭建自己的博客，说起来像是有点舍本逐末，因为现在对于我来说博客似乎是可有可无的，但是一旦想起要学点什么东西的时候总是无从下手，一来需要学的知识太多了，二来是很久很久没有学东西了，这两天慢慢的有点找到了当时学习的感觉。希望慢慢进入状态吧，今天粗略看了一些博客模板的那个博主的文章，感觉人家真的懂很多学了很多东西，而我这两年真的几乎什么都没有去学，像个三不像，不是个合格的工程师也没有找到自己想要的样子，希望一切都慢慢变好，人生有高有低，希望通过自己的努力找回自己原来的样子。</summary></entry><entry><title type="html">大数据工程师技能图谱&amp;amp;大数据技术生态</title><link href="http://localhost:4000/blog/2017/03/bigdata-skill.html" rel="alternate" type="text/html" title="大数据工程师技能图谱&amp;大数据技术生态" /><published>2017-03-20T00:00:00+08:00</published><updated>2017-03-20T00:00:00+08:00</updated><id>http://localhost:4000/blog/2017/03/bigdata-skill</id><content type="html" xml:base="http://localhost:4000/blog/2017/03/bigdata-skill.html">&lt;p&gt;大数据工程师必备技能图谱&amp;amp;大数据技术生态&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/datascience/bigdataengineerskill.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/datascience/Hadoop.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>chenglee</name></author><category term="Bigdata" /><category term="技能" /><summary type="html">大数据工程师必备技能图谱&amp;amp;大数据技术生态</summary></entry><entry><title type="html">网络传输基础</title><link href="http://localhost:4000/blog/2017/03/web-transmission-basis.html" rel="alternate" type="text/html" title="网络传输基础" /><published>2017-03-19T00:00:00+08:00</published><updated>2017-03-19T00:00:00+08:00</updated><id>http://localhost:4000/blog/2017/03/web-transmission-basis</id><content type="html" xml:base="http://localhost:4000/blog/2017/03/web-transmission-basis.html">&lt;p&gt;转自：http://www.ezlippi.com/blog/2015/04/web-transmission-basis.html&lt;/p&gt;
+
+&lt;p&gt;示例：Web服务器向Http客户端传送数据的过程:&lt;/p&gt;
+
+&lt;p&gt;在详细阐述网络传输过程之前，先来看一个最常见的例子，下图显示了一个网络服务器向客户端传送数据的完整过程：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://community.emc.com/servlet/JiveServlet/downloadImage/2-831148-90202/image002.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;需要传送的数据是网络服务器的HTML页面。&lt;/li&gt;
+  &lt;li&gt;应用协议HTTP报文首部添加到HTML数据之前。报文头信息包括：服务器所使用的HTTP版本（1.0/1.1），以及表明它包含发给网络客户端信息的状态编码（比如200表示Ok）。&lt;/li&gt;
+  &lt;li&gt;HTTP应用层协议将HTML格式的网页数据发送给传输层，传输层添加TCP首部信息。TCP传输层用于管理网络服务器和客户端之间的会话，TCP是面向连接的，通过拥赛控制、滑动窗口、超时重传等机制保证数据有效的传输给客户端。&lt;/li&gt;
+  &lt;li&gt;IP首部添加到TCP首部之前。IP层指定适当的源和目的IP地址。这些信息就构成了IP报文（IP Packet）。&lt;/li&gt;
+  &lt;li&gt;以太网协议首部添加到IP报文的两端之后，就形成了数据链路帧(frame)。上述帧发送至通向网络客户端的路径上的最近一个路由器（默认网关）。每经过一个路由器会移除以太网信息，观察IP报文，判定最佳路径，将报文插入一个新的帧（下一个路由器的MAC地址），并发送至目标路径上下一个相邻路由器。每一个路由器在转发之前都移除并添加新的数据链路层信息。&lt;/li&gt;
+  &lt;li&gt;数据通过互联网络传输，互联网络包含媒介和中间设备。&lt;/li&gt;
+  &lt;li&gt;客户端接收到包含数据的数据链路帧，处理各层协议头，之后以与添加时相反的顺序移除协议头。首先处理并移除以太网信息，之后是IP协议信息，接下来TCP信息，最后是HTTP信息。&lt;/li&gt;
+  &lt;li&gt;之后，将网页信息传递给客户端网页浏览器，浏览器把HTML网页渲染呈现给用户。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;###数据封装:&lt;/p&gt;
+
+&lt;p&gt;消息要在网络中传输，必须对它进行编码，以特定的格式进行封装，同时需要适当地封装以足够的控制和地址信息，以使它能够从发送方移动到接收方。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;消息大小&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;理论上，视频或邮件信息是能够以大块非中断型流从网络源地址传送到目的地址，但这也意味着同一时刻同一网络其他设备就无法收发消息。这种大型数据流会造成显著延时。并且，如果传输过程中连接断开，整个数据流都会丢失需要全部重传。因此更好的方法是将数据流分割（segmentation）为较小的，便于管理的片段，能够带来两点好处：&lt;/p&gt;
+
+&lt;p&gt;· 发送较小片段，网络上同时可有多个会话交错进行。这种在网络上将不同会话片段交错进行的过程称为多路传输（multiplexing）。
+· 分割可提高网络通讯的可靠性。各消息片段从源地址到目的地址无需经过相同路径，如果一条路径被堵塞或断开，其余消息可从替换路径到达目的地址。如果部分消息到不了目的地址，那只需重传丢失部分。&lt;/p&gt;
+
+&lt;p&gt;通过对片段打上标签的方式来保证顺序以及在接收时重组。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/image003.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;协议数据单元（Protocol Data Unit, PDU）&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;应用层数据在传输过程中沿着协议栈向下传递，每一层协议都会向其中添加首部信息，TCP首部和IP首部都是20字节的长度。这就是封装的过程。
+数据片段在各层网络结构中采用的形式就称为协议数据单元（PDU）。封装过程中，下一层对从上一层收到的PDU进行封装。在处理的每一个阶段PDU都有不同的名字来反应它的功能。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://community.emc.com/servlet/JiveServlet/downloadImage/2-831148-90203/image004.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;PDU按照TCP/IP协议的命名规范：
+· 数据（Data）：应用层PDU的常用术语
+· 分段（Segment）：传输层PDU
+. 数据报(Packet): 网络成PDU
+· 以太网帧（Frame）：链路层PDU
+· 比特（Bits）：在介质上物理传输数据所使用的PDU。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;封装&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;封装是指在传输之前为数据添加额外的协议头信息的过程。在绝大多数数据通信过程中，源数据在传输前都会封装以数层协议。在网络上发送消息时，主机上的协议栈从上至下进行操作。&lt;/p&gt;
+
+&lt;p&gt;以网络服务器为例，HTTP应用层协议发送HTML格式网页数据到传输层，应用层数据被分成TCP分段。各TCP分段被打上标签（主要是端口号，HTTP默认端口为80），称为首部（header），表明接收方哪一个进程应当接收此消息。同时也包含使得接收方能够按照原有的格式来重组数据的信息。&lt;/p&gt;
+
+&lt;p&gt;传输层将网页HTML数据封装成分段并发送至网络层，执行IP层协议。整个TCP分段封装成IP报文，也就是再添上IP首部。IP首部包括源和目的IP地址，以及发送报文到目的地址所必须的信息，包括一些控制字段。&lt;/p&gt;
+
+&lt;p&gt;之后，IP报文发送到链路层，封装以帧头和帧尾。每个帧头都包含源和目的物理地址。物理地址唯一指定了本地网络上的设备。帧尾包含差错校正信息。最后，由服务器网卡将比特编码传输给介质。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;解封装&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;接收主机以相反的方式（从下至上）进行操作称为解封装。解封装是接收设备移除一层或多层协议头的过程。数据在协议栈中向上移动直到终端应用层伴随着解封装。&lt;/p&gt;
+
+&lt;p&gt;###访问本地资源：&lt;/p&gt;
+
+&lt;p&gt;访问本地网络资源需要两种类型的地址：网络层地址和数据链路层地址。网络层和数据链路层负责将数据从发送设备传输至接收设备。两层协议都有源和目的地址，但两种地址的目的不同。&lt;/p&gt;
+
+&lt;p&gt;示例：客户端PC1与FTP在同一IP网络的通信&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://community.emc.com/servlet/JiveServlet/downloadImage/2-831148-90204/image005.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;网络地址&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;网络层地址或IP地址包含两个部分：网络号和主机号。路由器使用网络前缀部分将报文转发给适当的网络。最后一个路由器使用主机部分将报文发送给目标设备。同一本地网络中，网络前缀部分是相同的，只有主机设备地址部分不同。&lt;/p&gt;
+
+&lt;p&gt;源IP地址：发送设备，即客户端PC1的IP地址：192.168.1.110
+目的IP地址：接收设备，即FTP服务器：192.168.1.9&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;数据链路地址&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;数据链路地址（MAC）的目的是在&lt;strong&gt;同一网络中&lt;/strong&gt;将数据链路帧从一个网络接口发送至另一个网络接口。以太网LAN和无线网LAN是两种不同物理介质的网络示例，分别有自己的数据链路协议。
+当IP报文的发送方和接收方位于同一网络，数据链路帧直接发送到接收设备（通过ARP来获取目的IP的MAC地址）。以太网上数据链路地址就是以太网MAC地址。MAC地址是物理植入网卡的48比特地址。
+源MAC地址：发送IP报文的PC1以太网卡MAC地址，AA-AA-AA-AA-AA-AA。
+目的MAC地址：当发送设备与接收设备位于同一网络，即为接收设备的数据链路地址。本例中，FTP MAC地址：CC-CC-CC-CC-CC-CC。
+源和目的MAC地址添加到以太网帧中。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://community.emc.com/servlet/JiveServlet/downloadImage/2-831148-90205/image006.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;MAC与IP地址&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;发送方必须知道接收方的物理和逻辑地址。发送方主机能够以多种方式学习到接收方的IP地址：比如浏览器缓存、getHostByName系统调用、域名系统（Domain Name System, DNS），或通过应用手动输入，如用户指定FTP地址。&lt;/p&gt;
+
+&lt;p&gt;以太网MAC地址是怎么识别的呢？发送方主机使用地址解析协议（Address Resolution Protocol, ARP）以检测本地网络的所有MAC地址。如下图所示，发送主机在整个LAN发送ARP请求消息，这是一条广播消息。ARP请求包含目标设备的IP地址，LAN上的每一个设备都会检查该ARP请求，看看是否包含它自身的IP地址。只有符合该IP地址的设备才会发送ARP响应。ARP响应包含ARP请求中IP地址相对应的MAC地址。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://community.emc.com/servlet/JiveServlet/downloadImage/2-831148-90206/670-270/image007.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;访问远程资源：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;默认网关&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;当主机发送消息到远端网络，必须使用路由器，也称为默认网关。默认网关就是位于发送主机同一网络上的路由器的接口IP地址。有一点很重要：本地网络上的所有主机都能够配置自己的默认网关地址。如果该主机的TCP/IP设置中没有配置默认网关地址，或指定了错误的默认网关地址，则远端网络消息无法被送达。
+如下图所示，LAN上的主机PC 1使用IP地址为192.168.1.1的R1作为默认网关，如果PDU的目的地址位于另一个网络，则主机将PDU发送至路由器上的默认网关。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://community.emc.com/servlet/JiveServlet/downloadImage/2-831148-90207/image008.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;与远端网络设备通讯&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;下图显示了客户端主机PC 1与远端IP网络服务器进行通讯的网络层地址与数据链路层地址：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://community.emc.com/servlet/JiveServlet/downloadImage/2-831148-90208/image009.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;网络地址&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;当报文的发送方与接收方位于不同网络，源和目的IP地址将会代表不同网络上的主机。
+源IP地址：发送设备即客户端主机PC 1的IP地址：192.168.1.110。
+目的IP地址：接收设备即网络服务器的IP地址：172.16.1.99。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;数据链路地址&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;当报文的发送方与接收方位于不同网络，以太网数据链路帧无法直接被发送到目的主机。以太网帧必须先发送给路由器或默认网关。本例中，默认网关是R1，R1的接口IP地址与PC 1属于同一网络，因此PC 1能够直接达到路由器。
+源MAC地址：发送设备即PC 1的MAC地址，PC1的以太网接口MAC地址为：AA-AA-AA-AA-AA-AA。
+目的MAC地址：当报文的发送方与接收方位于不同网络，这一值为路由器或默认网关的以太网MAC地址。本例中，即R1的以太网接口MAC地址，即：11-11-11-11-11-11。
+IP报文封装成的以太网帧先被传输至R1，R1再转发给目的地址即网络服务器。R1可以转发给另一个路由器，如果目的服务器所在网路连接至R1，则直接发送给服务器。&lt;/p&gt;
+
+&lt;p&gt;发送设备如何确定路由器的MAC地址？每一个设备通过自己的TCP/IP设置中的默认网关地址得知路由器的IP地址。之后，它通过ARP来得知默认网关的MAC地址，该MAC地址随后添加到帧中。&lt;/p&gt;</content><author><name>chenglee</name></author><category term="web" /><category term="web" /><category term="网络传输" /><category term="转载" /><summary type="html">转自：http://www.ezlippi.com/blog/2015/04/web-transmission-basis.html</summary></entry><entry><title type="html">新的开始</title><link href="http://localhost:4000/blog/2017/03/first-blog.html" rel="alternate" type="text/html" title="新的开始" /><published>2017-03-19T00:00:00+08:00</published><updated>2017-03-19T00:00:00+08:00</updated><id>http://localhost:4000/blog/2017/03/first-blog</id><content type="html" xml:base="http://localhost:4000/blog/2017/03/first-blog.html">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;这两天一直在搭建自己的博客，说起来像是有点舍本逐末，因为现在对于我来说博客似乎是可有可无的，但是一旦想起要学点什么东西的时候总是无从下手，一来需要学的知识太多了，二来是很久很久没有学东西了，这两天慢慢的有点找到了当时学习的感觉。希望慢慢进入状态吧，今天粗略看了一些博客模板的那个博主的文章，感觉人家真的懂很多学了很多东西，而我这两年真的几乎什么都没有去学，像个三不像，不是个合格的工程师也没有找到自己想要的样子，希望一切都慢慢变好，人生有高有低，希望通过自己的努力找回自己原来的样子。
+
+本来有挺多东西想要说的，但是今天实在已经很累了，腰酸背痛的，洗澡睡觉吧，明天继续努力，告诉自己，自己是一张白纸，一切从头开始，就当自己是刚刚毕业的大学生，力拼生活。 这篇文章作为一切东西开头的象征，单薄了点，找时间再好好写写吧。 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name>chenglee</name></author><category term="生活" /><category term="新的开始" /><summary type="html">这两天一直在搭建自己的博客，说起来像是有点舍本逐末，因为现在对于我来说博客似乎是可有可无的，但是一旦想起要学点什么东西的时候总是无从下手，一来需要学的知识太多了，二来是很久很久没有学东西了，这两天慢慢的有点找到了当时学习的感觉。希望慢慢进入状态吧，今天粗略看了一些博客模板的那个博主的文章，感觉人家真的懂很多学了很多东西，而我这两年真的几乎什么都没有去学，像个三不像，不是个合格的工程师也没有找到自己想要的样子，希望一切都慢慢变好，人生有高有低，希望通过自己的努力找回自己原来的样子。</summary></entry><entry><title type="html">Debug汇总</title><link href="http://localhost:4000/blog/2016/09/debug-all.html" rel="alternate" type="text/html" title="Debug汇总" /><published>2016-09-11T00:00:00+08:00</published><updated>2016-09-11T00:00:00+08:00</updated><id>http://localhost:4000/blog/2016/09/debug-all</id><content type="html" xml:base="http://localhost:4000/blog/2016/09/debug-all.html">&lt;p&gt;1.编译python3时提示系统没有C编译器&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;解决方法： yum install gcc&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;2.安装完python3之后命令行模式方向键不可用&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;原因：缺少readline库&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;解决方法：下载相关库，解压后进入到解压后的文件夹，输入命令&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python setup.py install
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;                    但是出现问题是找不到合适的库：所以可使用pip进行安装
+ 启示：第三方模块安装方式。通常第三方模块里都会带有setup.py文件，下载了第三方模块之后，解压然后进到解                  压后的文件，输入命令：python setup.py install
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;3.编译安装python3时提示：Ignoring ensurepip failure: pip 8.1.1 requires SSL/TLS 导致pip没有安装
+   原因：SSL没有安装
+   解决方式：yum install openssl-devel 后重新安装一次（make install）&lt;/p&gt;
+
+&lt;p&gt;4.升级python（python默认改成了python3）后使用yum报错
+File “/usr/bin/yum”, line 30
+    except KeyboardInterrupt, e:
+                            ^
+SyntaxError: invalid syntax
+原因：yum中指定的python变成python3.&lt;em&gt;，导致在语法上和2.&lt;/em&gt;的不太一样
+解决方法：修改yum的python解析器为python2.6（系统自带的那个）&lt;/p&gt;
+
+&lt;p&gt;5.用pip安装python包时提示超时
+     原因：pip默认超时时间太短
+     解决：加大超时时间（顺便更新了pip）   pip –default-timeout=60000 install -U pip&lt;/p&gt;
+
+&lt;p&gt;6.用命令：pip install readline安装readline的时候报错，提示为：usr/bin/ld: cannot find -lxxx   （xxx为具体的库的名字）&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;原因：库文件并没有导入的ld检索目录中&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;按以下方式进行定位：
+	1.检查有没有安装xxx库。解决方法：yum install xxx
+	2.检查系统是否存在相应的库文件：libxxx.so
+		2.1若系统中有这样的库，需要保证库所在的目录（如/usr/bin 、/lib64）在/etc/ld.so.conf配置文件中，通常系统路径都会在那里面，如上面举例的那两个
+		2.2若系统的库文件的命名为后面带有数字的，如lib.xxx.so.1，要对库文件做软连接。ln -sv libxxx.so.1 libxxx.so
+	3.作为以上修改后需要执行命令：ldconfig 重建ld.so.cache文件
+	4.检测：gcc -lxxx –verbose&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;7.sbt gen-idea 报错。显示没有gen-idea命令
+     原因：没有装gen-idea插件
+     解决：在./project/plugins.sbt 里加入 addSbtPlugin(“com.github.mpeltonen” % “sbt-idea” % “1.6.0”)&lt;/p&gt;
+
+&lt;p&gt;9.sbt建立webapp的时候提示找不到jetty，原因是xib-web-plugin插件版本没配对&lt;/p&gt;
+
+&lt;p&gt;10.用spary建立网络服务器，在sbt启动服务（container:start）时报错：java.lang.UnsupportedClassVersionError: org/eclipse/jetty/servlet/listener/ELContextCleaner : Unsupported major.minor version 52.0
+  原因：jdk版本过低，工程所依赖的第三方库需要更高版本jdk&lt;/p&gt;
+
+&lt;p&gt;11.卸载linux java
+     1.rpm -qa |grep jdk  //查出已经安装了的java
+     2.rpm -e –nodeps 上一步中查出来的值   //卸载&lt;/p&gt;
+
+&lt;p&gt;13.报错： ERROR 1820 (HY000): You must reset your password using ALTER USER statement before executing this statement.
+     原因：密码过于简单，需要重置密码
+     重置： set password = password(‘chneg1220’);
+     报错： ERROR 1819 (HY000): Your password does not satisfy the current policy requirements
+     原因：密码过于简单不符合要求
+     解决： set password = password(‘Chneg@1220’);&lt;/p&gt;
+
+&lt;p&gt;14.外网访问服务器的80端口应用时访问不了，原因是和路由器占用了80端口，即使做了端口映射，从外部访问进来也是有问题的，改用81端口&lt;/p&gt;
+
+&lt;p&gt;15.sbt update的时候报错： sbt.ResolveException: unresolved dependency: org.scalaz.stream#scalaz-stream_2.10;0.7a: not found
+     原因：在sbt所配置的服务器上找不到streamz依赖包
+     解决： resolvers += “Scalaz Bintray Repo” http://dl.bintray.com/scalaz/releasesat “” 添加一个新的解析服务器&lt;/p&gt;
+
+&lt;p&gt;16.运行测试用例的时候报错，原因spesc2 版本有问题，3.x的版本有问题，要配置成2.x的&lt;/p&gt;
+
+&lt;p&gt;17.用scala程序链接mysql时失败
+     报错：java.sql.SQLNonTransientConnectionException: Could not create connection to database server
+     原因：mysql不允许远程访问
+     解决：在mysql服务器本地登陆mysql 修改mysql数据库下得user表的某个值  update user set host=‘%’ where user=‘root’&lt;/p&gt;
+
+&lt;p&gt;18.在提交代码上，git比svn多一步push操作才能把代码交到服务器&lt;/p&gt;
+
+&lt;p&gt;19.初次写post请求路由时报错：could not find implicit value for parameter um: spray.httpx.unmarshalling.FromRequestUnmarshaller&lt;/p&gt;
+
+&lt;p&gt;20.mac切换到root用户时还有限制。原因：系统有SIP保护。 解决：开机按command+r，进入终端，输入 csrutil disable  重启&lt;/p&gt;</content><author><name>chenglee</name></author><category term="Debug" /><summary type="html">1.编译python3时提示系统没有C编译器 解决方法： yum install gcc</summary></entry><entry><title type="html">MEDITIONS</title><link href="http://localhost:4000/blog/2012/11/meditations.html" rel="alternate" type="text/html" title="MEDITIONS" /><published>2012-11-05T00:00:00+08:00</published><updated>2012-11-05T00:00:00+08:00</updated><id>http://localhost:4000/blog/2012/11/meditations</id><content type="html" xml:base="http://localhost:4000/blog/2012/11/meditations.html">&lt;p&gt;&lt;strong&gt;拾回那个曾经的自己[2017.3.20]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;选出或者写出当天自己觉得最带感的话：&lt;/p&gt;
+
+&lt;p&gt;2012.11.5 ：“无论喜怒哀乐，一回头，却都是无人分享的遗憾”  写出了自的心情&lt;/p&gt;
+
+&lt;p&gt;2012.11.6 ：some mistakes had exist once will not make up forever,so, don’t dirty yourself ,insist your principle and outlook of value.&lt;/p&gt;
+
+&lt;p&gt;2012.11.9：“科学家的大脑，诗人的心”&lt;/p&gt;
+
+&lt;p&gt;2012.11.12：better me, BETTER YOU.&lt;/p&gt;
+
+&lt;p&gt;2012.11.20：“找到那个最美的自己，然后为之不断奋斗”&lt;/p&gt;
+
+&lt;p&gt;2012.12.2  ：“你只有一條命，我也一樣，有今生無來世，所以我們在這一世，要儘可能地對身邊的人好，把一顆真心交出來。——張國榮 ”&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;2013.3.8: “傻逼，你总得要有第一次。”   ——《独唱团.秋菊男的故事》&lt;/p&gt;
+
+&lt;p&gt;2013.3.10：每刻都做一切应该做的事，这样才不会后悔&lt;/p&gt;
+
+&lt;p&gt;2013.3.13：没有人不傻逼过，没有人不煎熬过&lt;/p&gt;
+
+&lt;p&gt;2013.3.19：”once it’s gone, it’s gone.”&lt;/p&gt;
+
+&lt;p&gt;2013.3.31：努力，努力，再努力！&lt;/p&gt;
+
+&lt;p&gt;2013.4.2：让意志强势地主导行为，爱我所爱，憎我所憎。&lt;/p&gt;
+
+&lt;p&gt;2013.4.3：没有自制力的都是渣&lt;/p&gt;
+
+&lt;p&gt;2013.4.4：Every day ,just do it.&lt;/p&gt;
+
+&lt;p&gt;2013.4.10：大学期间，每一天都不能让自己过得舒服。（不逼一下自己，怎么知道自己能走多远。）&lt;/p&gt;
+
+&lt;p&gt;2013.4.11：脑子不停的动的人总会成为胜利者 （看过史玉柱的经历而得来的感受）&lt;/p&gt;
+
+&lt;p&gt;2013.4.18：确定了一定要做得事情就不要犹豫和拖拉&lt;/p&gt;
+
+&lt;p&gt;2013.8.23：总有那么一种人，你喜欢他，你会愿意给他卖命，你不喜欢他，你会恨他入骨。&lt;/p&gt;
+
+&lt;p&gt;2013.8.24：能认真对待生活很可贵&lt;/p&gt;
+
+&lt;p&gt;2013.8.25：有勇气在年轻的时候干一些自己没有把握的事情    ——陈丹青&lt;/p&gt;
+
+&lt;p&gt;2013.9.1 ：“ 越是出色的人越善于在缺乏条件的状态下把事情做到最好，越是平庸的人越是对做事的条件挑三拣四。”&lt;/p&gt;
+
+&lt;p&gt;2013.9.3： “You have to trust in something–your gut, destiny, life, karma, whatever” –Jobs&lt;/p&gt;
+
+&lt;p&gt;2013.9.4：人的一切痛苦，本质上都是对自己无能的愤怒   —-王小波&lt;/p&gt;
+
+&lt;p&gt;2013.9.5：“妄自评判一个自己并不了解的事物和行为，这个倒是真的很不成熟呐” 用于警惕与反驳&lt;/p&gt;
+
+&lt;p&gt;2013.9.22 ：不要迷茫，如果连你都犹豫不决的话，我们不知道该相信谁了。——罗罗诺亚·索隆&lt;/p&gt;
+
+&lt;p&gt;2013.11.27：世界上有很多美好的东西，美好的事，美好的人，自己的每一天也要过得美好。耶&lt;/p&gt;
+
+&lt;p&gt;2013.11.29：当看不到希望的时候就要作出改变&lt;/p&gt;
+
+&lt;p&gt;2013.11.29：勤勉是一个人最优秀的品质。人生如戏，一道一道的关卡，能过去就过去了，过不去就是过不去，简单粗暴，每从一个劫难中走出来后总是会成为一个新的自己，不断不断地这样，不是循环，但也不会有结束，在最后站在人生的终点，回首这一生希望在脸上能看到微笑，然后留下的是世人的评价。&lt;/p&gt;
+
+&lt;p&gt;2013.11.30：该正经的时候一定要正经，不能有半点的嘻哈。(把握好度，这是一门有意思的学问)&lt;/p&gt;
+
+&lt;p&gt;2013.11.30：做什么事情都要给目的排个序，为了主要的目的次要的东西有时候要忍受。（目的的范围很广：为了自己开心、帮助别人、提升自己、获得报酬、获得成就感、获得尊重，等）&lt;/p&gt;
+
+&lt;p&gt;2013.11.29：勤勉是一个人最重要的品质&lt;/p&gt;
+
+&lt;p&gt;2013.12.8：一个人最重要的就是自己瞧得起自己。不是自信，只是瞧得起。&lt;/p&gt;
+
+&lt;p&gt;2013.2.13：在高压和高强度时，有条不紊，保持专注&lt;/p&gt;
+
+&lt;p&gt;2013.12.15：用好每一天每一秒，落后了好多好多了，不要等无法挽回的时候才意识到，加油，要追回来，不做平常人。&lt;/p&gt;
+
+&lt;p&gt;2013.12.15：无论怎么忙，怎么多事情做，天塌下来也要每天拿两个小时来读书。&lt;/p&gt;
+
+&lt;p&gt;2013.12.19：作为一个想实现梦想的人，最重要的有两点：勤奋，无谓&lt;/p&gt;
+
+&lt;p&gt;2013.12.21：记住记住，一定记住，生活永远永远都不应该是淡而无味，更不应该倍受煎熬。&lt;/p&gt;
+
+&lt;p&gt;2013.12.25：命运由人的选择构成，而选择则归于性格，性格则归于遭际……许多时候，命运看似曲折离奇，其实不过是反复的抗争、走到另一个极端，而其结局，从一开始，就已经书定了。  ——from 张家玮&lt;/p&gt;
+
+&lt;p&gt;2013.12.25：永远不要以为我们可以逃避，我们的每一步都决定着最后的结局，我们的脚正走向我们选定的终点。   ——米兰.昆德拉&lt;/p&gt;
+
+&lt;p&gt;2013.12.31：人最重要的是自己相信自己，自己看得起自己。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;2014.1.4：比任何人都狠地拥抱生活，主动的去体会极致的甜与苦、成功或失败。&lt;/p&gt;
+
+&lt;p&gt;2014.2.3：重要的不是别人怎么看你，而是你自己是一个怎么样的人。&lt;/p&gt;
+
+&lt;p&gt;2014.2.4：在绝大多数情况下，任何人想和你交流，你都应该面对面地作出回应&lt;/p&gt;
+
+&lt;p&gt;2014.3.3：一定要去牛逼的公司&lt;/p&gt;
+
+&lt;p&gt;2014.3.4：如果拼得不开心的话，那何必要拼&lt;/p&gt;
+
+&lt;p&gt;2014.3.5：“对未来的幻想造就了你当下的虚空”     ——from 知乎某答案&lt;/p&gt;
+
+&lt;p&gt;2014.3.5：有些事情并不需要记下来，去做就行。&lt;/p&gt;
+
+&lt;p&gt;2014.3.13：潇洒的活着，best of me&lt;/p&gt;
+
+&lt;p&gt;2014.3.17：一个人最重要的不是有多牛逼，而是心不凉、心未死&lt;/p&gt;
+
+&lt;p&gt;2014.3.27：”一件事物（存在就是存在，不存在就是不存在，一切都摆在那），有无意义，在于它对你的重要性。朋友，对你无用的事物，未必别人也不需要。”            ——from知乎&lt;/p&gt;
+
+&lt;p&gt;2014.4.7：人与人之间最大的差别不是懂得了多少东西拥有多少技能，而是怎么去做事。&lt;/p&gt;
+
+&lt;p&gt;2014.4.28：固定观念往往会孕育出盲点   ——《幸福课》&lt;/p&gt;
+
+&lt;p&gt;2014.5.9：你拼了和你拼命了，一字之差，天壤之别      ——恒大vs富力 评论员原话&lt;/p&gt;
+
+&lt;p&gt;2014.5.30: “我要记得的，我永远都会记得”  —— 《阿飞正传》 台词&lt;/p&gt;
+
+&lt;p&gt;2014.5.30：在精神上，人的一生中会经历很多次的死亡与重生。每次的生与死都会迸发出耀眼的光芒。&lt;/p&gt;
+
+&lt;p&gt;2.14.6.1：“我不会去处理没有发生的事情。”     ——波波维奇&lt;/p&gt;
+
+&lt;p&gt;2014.6.7: 宁愿坐着发呆也不让时间在床上流逝&lt;/p&gt;
+
+&lt;p&gt;2014.6.12：足够牛逼的话一切都不是问题，相比之下生离死别才应该是能让人痛苦的事情。&lt;/p&gt;
+
+&lt;p&gt;2014.6.13：”like a dog,like a god”&lt;/p&gt;
+
+&lt;p&gt;2014.6.19：做人要向前看，不要回头看，绝不应老是想以前的事，以前的自己，也没有如果，眼中只有前面的东西&lt;/p&gt;
+
+&lt;p&gt;2014.7.6:毫无觉悟的人的呐喊，就如同世间的噪音一般 不值一提   ——凯文迪修&lt;/p&gt;
+
+&lt;p&gt;2014.7.9:恐惧并不存在，恐惧只是我们对未来的预知，此刻看来恐惧是那些根本不存在的东西  —— 《重返地球》&lt;/p&gt;
+
+&lt;p&gt;2014.7.10：不去变永远都不会改变&lt;/p&gt;
+
+&lt;p&gt;2014.7.11：人们通常也不能理解：心无旁骛地做一件事，比这件事本身可能更重要。 ——董元方&lt;/p&gt;
+
+&lt;p&gt;2014.8 ： 抹杀了过去，便抹杀了未来。&lt;/p&gt;
+
+&lt;p&gt;2014.8.18：你永远不会比你现在更年轻。   —— 知乎&lt;/p&gt;
+
+&lt;p&gt;2014.8.30：Justice means giving pople what they deserve     ——— Aristotle&lt;/p&gt;
+
+&lt;p&gt;2014.8.31：有些煎熬和彷徨是注定的，熬着，做着正确的事，呵呵&lt;/p&gt;
+
+&lt;p&gt;2014.9.5：李帅向摄影师兜底儿：“我从高一开始攒钱，把伙食费省下来，3年攒了4000块，为自己买了一款索尼微单。”——玻璃男孩—李帅&lt;/p&gt;
+
+&lt;p&gt;某天：所谓遗憾，都是由于自己的懦弱，而不是无能。&lt;/p&gt;
+
+&lt;p&gt;某天：做任何你想做的事情。任何。但不管选择做什么事，既然做了，就要坚持，并且做到牛逼。&lt;/p&gt;
+
+&lt;p&gt;2014.9.12：他尊敬所有值得尊敬的人，从来都是。  ——形容周星驰&lt;/p&gt;
+
+&lt;p&gt;2014.9.12：你专注做你爱做的事情，其他的其实就不是那么的重要，世间何其的烦扰。——看了关于周星驰的一篇文章有感&lt;/p&gt;
+
+&lt;p&gt;2014.9.12:做成一件有价值的事永远都不是那么的容易。&lt;/p&gt;
+
+&lt;p&gt;2014.“在所有那些古怪的虚荣、自负、要求和敌意后面，有一个正在受苦的人。”&lt;/p&gt;
+
+&lt;p&gt;2014.10.2：better me, go go go !&lt;/p&gt;
+
+&lt;p&gt;2014.10.4：不要回首，时代在改变  ——白胡子&lt;/p&gt;
+
+&lt;p&gt;2014.10.15: 就算是在偷懒（休息）也要保持清晰的头脑。任何阶段、任何状态，长时间睡懒觉都是很傻逼的。&lt;/p&gt;
+
+&lt;p&gt;2014.10.15: what you do show who you are&lt;/p&gt;
+
+&lt;p&gt;2014.10.16：也许对于绝大多数人来说，活着运气很重要，但是我是那些不需要靠运气活着的人。所以好的坏的都来吧，我没关系。&lt;/p&gt;
+
+&lt;p&gt;2014.11.9：“我觉得看一个人不能光看他好起来有多好，最主要看他坏起来有多坏”  —— 知乎某用户&lt;/p&gt;
+
+&lt;p&gt;2014.11.28：世界就在你面前，就看你如何对待世界&lt;/p&gt;
+
+&lt;p&gt;2014.11.28：wonderful is not easy&lt;/p&gt;
+
+&lt;p&gt;2014.11.28：beautiful things don’t ask for attention  ——《白日梦想家》&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;2015.1.15: 激情，梦想，活力，拼搏 ——这是年轻人最该有的东西，不要活得像个老家伙&lt;/p&gt;
+
+&lt;p&gt;2015.1.25: 那些行为超越其智慧的人，他的智慧将会恒久&lt;/p&gt;
+
+&lt;p&gt;2015.1.25：有一种名为”相同”的瘟疫，在杀死人们的快乐  ——　TED&lt;/p&gt;
+
+&lt;p&gt;2015.2.18:Steve Jobs说: Life can be much broader once you discover one simple fact: Everything around you that you call life was made up by people that were no smarter than you and you can change it, you can inf luence it, you can build your own things that other people can use. Once you learn that, you’ll never be the same again 。&lt;/p&gt;
+
+&lt;p&gt;2015.3.15：“很多人都会说：事情都是说说容易做起来难，其实真正的问题不是难不难？而是你有没有去做？” ——form知乎&lt;/p&gt;
+
+&lt;p&gt;2015.3.15:从今天开始，做自己，做想做的事情，做好。&lt;/p&gt;
+
+&lt;p&gt;2015.5.1 ： 凡事不做到做好，怎么能成为最好的自己&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;2016.7.26： 能不能成事，能成为什么样的人，最重要的不是你有什么技能，知道什么，懂得什么，而是看你有什么样的品质。品质这个词很重要&lt;/p&gt;
+
+&lt;p&gt;2016.8.15：快乐生活，认真做事&lt;/p&gt;
+
+&lt;p&gt;2016.8.16：有些东西明确了是要必须坚持的就要坚持到底，要有原则&lt;/p&gt;
+
+&lt;p&gt;2016.9.11：不要想着一口吃了一只大象，重要的是坚持不懈的奋斗&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;2017.03.21: 做事情要有锐利度，思路要清洗，想清楚自己想要什么、此刻应该要做什么、怎么去做&lt;/p&gt;
+
+&lt;p&gt;2017.03.26：只有去过自己想要过的生活，才会得到自己想要的东西。（一路向西中的耿浩，如果不是重新拾起音乐，那就不会和把伴娘有共同语言）&lt;/p&gt;
+
+&lt;p&gt;2017.03.26：没有人没有想要的东西的，那些都只是懦弱和无能的说辞&lt;/p&gt;
+
+&lt;p&gt;2017.03.27: 信念比计划重要，特别是在看不清前路的时候。（参考路飞，一个从来没有计划却无比坚定的人）&lt;/p&gt;</content><author><name>chenglee</name></author><category term="Life" /><category term="生活" /><summary type="html">拾回那个曾经的自己[2017.3.20]</summary></entry></feed>
