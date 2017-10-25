@@ -3,7 +3,7 @@ include: ['.htaccess']
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "CNAME", "Gemfile", "Gemfile.lock"]
 markdown: kramdown
 highlights: pygments
-url: "http://127.0.0.1:40000"
+url: "http://127.0.0.1:4040"
 cdn_url: 7u2t01.com1.z0.glb.clouddn.com
 lsi: false
 safe: true
