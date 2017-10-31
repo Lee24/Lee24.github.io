@@ -5728,8 +5728,8 @@ a.list-group-item-danger.active:focus {
 }
 
 .panel-group {
-    margin-bottom: 20px;
-    margin-left: 35px;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 .panel-group .panel {
