@@ -1,38 +1,29 @@
-permalink: /blog/:year/:month/:title.html
-include: ['.htaccess']
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "CNAME", "Gemfile", "Gemfile.lock"]
+permalink: /:year/:month/:day/:title.html
+paginate: 10
 markdown: kramdown
-highlights: pygments
-url: "http://127.0.0.1:4040"
-cdn_url: 7u2t01.com1.z0.glb.clouddn.com
-lsi: false
-safe: true
-timezone: Asia/Shanghai
 
+# 作者信息
+author:
+  name: Lee24
+  email: li.zicheng@qq.com
+
+rss_url: /pages/atom.xml
+
+# gavatar头像及Favicon
+gavatar: /public/img/logo.png
+favicon: /public/img/logo.png
+
+
+# 主题设置，自动激活某个标签
+active: 杂谈
+
+
+# 中文本地化
+locals:
+  tags: 知识
+  about: 关于
+  newest: 最新文章
+  archive: 归档
+
+# 配置项目
 gems: [jekyll-paginate]
-paginate: 8
-paginate_path: "page:num"
-enable_coderay: true
-
-kramdown:
-  auto_ids: true,
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-
-
-JB :
-  IMAGE_PATH : http://127.0.0.1:40000/images
-
-# presonal config
-#domain: http://coolshell.info
-title: Lee24
-description: 人的一切痛苦，本质上都是对自己无能的愤怒  ---- 王小波
-author: chenglee
-email: li.zicheng@qq.com
-github: Lee24
-
-config:
-  js_dir:
-  img_dir:
-  css_dir:
