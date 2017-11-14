@@ -85,13 +85,37 @@ $ chmod 600 .ssh/authorized_keys
 - **dfs.data.dir** 这是DataNode结点被指定要存储数据的本地文件系统路径。DataNode结点上的这个路径没有必要完全相同，因为每台机器的环境很可能是不一样的。但如果每台机器上的这个路径都是统一配置的话，会使工作变得简单一些。默认的情况下，它的值为file://${hadoop.tmp.dir}/dfs/data这个路径只能用于测试的目的，因为它很可能会丢失掉一些数据。所以这个值最好还是被覆盖。
 - **dfs.name.dir** 这是NameNode结点存储hadoop文件系统信息的本地系统路径。这个值只对NameNode有效，DataNode并不需要使用到它。上面对于/temp类型的警告，同样也适用于这里。在实际应用中，它最好被覆盖掉。
 
-
-
 8. 配置mapred-site.xml
-
-
+```xml
+<configuration>
+    <property>
+        <name>mapred.job.tracker</name>
+        <value>localhost:9001</value>
+    </property>
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+</configuration>
+```
+- **mapred.job.tracker** JobTracker的主机（或者IP）和端口。不写的话默认是 _localhost_
+- **mapred.framework.name** 指的是使用yarn运行mapreduce程序
 
 9. 配置yarn-site.xml
+```xml
+<configuration>
+    <property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+    </property>
+</configuration>
+```
+- **yarn.nodemanager.aux-services** NodeManager上运行的附属服务。需配置成mapreduce_shuffle，才可运行MapReduce程序
+
+10. 格式化HDFS文件系统
+>**hadoop namenode -format**
+
+在使用hadoop前，必须格式化一个全新的HDFS安装，通过创建存储目录和NameNode持久化数据结构的初始版本，格式化过程创建了一个空的文件系统。由于NameNode管理文件系统的元数据，而DataNode可以动态的加入或离开集群，因此这个格式化过程并不涉及DataNode。
 
 
 ### 总结
