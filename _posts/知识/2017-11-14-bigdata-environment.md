@@ -41,7 +41,7 @@ $ cat .ssh/id_rsa.pub >> .ssh/authorized_keys
 $ chmod 600 .ssh/authorized_keys
 
 5. 配置hadoop-env.sh  
-在配置文件中加入：  export JAVA_HOME=/usr/java/jdk1.8(具体路径)
+在配置文件中加入：  **export JAVA_HOME=/usr/java/jdk1.8** _(具体路径)_
 
 6. 配置core-site.xml
 
@@ -58,12 +58,12 @@ $ chmod 600 .ssh/authorized_keys
 </configuration>
 ```
 
-- fs.default.name 这是一个描述集群中NameNode结点的URI(包括协议、主机名称、端口号)，集群里面的每一台机器都需要知道NameNode的地址。DataNode结点会先在NameNode上注册，这样它们的数据才可以被使用。独立的客户端程序通过这个URI跟DataNode交互，以取得文件的块列表。
-- hadoop.tmp.dir 是hadoop文件系统依赖的基础配置，很多路径都依赖它。如果hdfs-site.xml中不配置namenode和datanode的存放位置，默认就放在/tmp/hadoop-${user.name}这个路径中
+- **fs.default.name** 这是一个描述集群中NameNode结点的URI(包括协议、主机名称、端口号)，集群里面的每一台机器都需要知道NameNode的地址。DataNode结点会先在NameNode上注册，这样它们的数据才可以被使用。独立的客户端程序通过这个URI跟DataNode交互，以取得文件的块列表。
+- **hadoop.tmp.dir** 是hadoop文件系统依赖的基础配置，很多路径都依赖它。如果hdfs-site.xml中不配置namenode和datanode的存放位置，默认就放在/tmp/hadoop-${user.name}这个路径中
 
 
 
-7. hdfs-site.xml
+7. 配置hdfs-site.xml
 
 ```xml
 <configuration>  
@@ -81,13 +81,17 @@ $ chmod 600 .ssh/authorized_keys
     </property>  
 </configuration>
 ```
+- **dfs.replication** 它决定着系统里面的文件块的数据备份个数。对于一个实际的应用，它应该被设为3（这个数字并没有上限，但更多的备份可能并没有作用，而且会占用更多的空间）。少于三个的备份，可能会影响到数据的可靠性(系统故障时，也许会造成数据丢失)
+- **dfs.data.dir** 这是DataNode结点被指定要存储数据的本地文件系统路径。DataNode结点上的这个路径没有必要完全相同，因为每台机器的环境很可能是不一样的。但如果每台机器上的这个路径都是统一配置的话，会使工作变得简单一些。默认的情况下，它的值为file://${hadoop.tmp.dir}/dfs/data这个路径只能用于测试的目的，因为它很可能会丢失掉一些数据。所以这个值最好还是被覆盖。
+- **dfs.name.dir** 这是NameNode结点存储hadoop文件系统信息的本地系统路径。这个值只对NameNode有效，DataNode并不需要使用到它。上面对于/temp类型的警告，同样也适用于这里。在实际应用中，它最好被覆盖掉。
 
 
-8. mapred-site.xml
+
+8. 配置mapred-site.xml
 
 
 
-
+9. 配置yarn-site.xml
 
 
 ### 总结
