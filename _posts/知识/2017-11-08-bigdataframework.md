@@ -23,4 +23,4 @@ Mesos
 
 
 ### 必备的几件
-hadoop【hdfs,yarn】,spark
+hadoop【hdfs,yarn】,hive,sqoop,spark,
