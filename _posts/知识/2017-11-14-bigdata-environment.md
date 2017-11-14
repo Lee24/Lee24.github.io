@@ -56,8 +56,29 @@ $ chmod 600 .ssh/authorized_keys
    </property>
 </configuration>
 ```
+- fs.default.name 这是一个描述集群中NameNode结点的URI(包括协议、主机名称、端口号)，集群里面的每一台机器都需要知道NameNode的地址。DataNode结点会先在NameNode上注册，这样它们的数据才可以被使用。独立的客户端程序通过这个URI跟DataNode交互，以取得文件的块列表。
+- hadoop.tmp.dir 是hadoop文件系统依赖的基础配置，很多路径都依赖它。如果hdfs-site.xml中不配置namenode和datanode的存放位置，默认就放在/tmp/hadoop-${user.name}这个路径中
+
+
 
 7. hdfs-site.xml
+```xml
+<configuration>  
+    <property>  
+        <name>dfs.replication</name>  
+        <value>1</value>  
+    </property>  
+    <property>  
+        <name>dfs.name.dir</name>  
+        <value>/usr/local/hadoop/hdfs/name</value>  
+    </property>  
+    <property>  
+        <name>dfs.data.dir</name>  
+        <value>/usr/local/hadoop/hdfs/data</value>  
+    </property>  
+</configuration>
+```
+
 
 8. mapred-site.xml
 
