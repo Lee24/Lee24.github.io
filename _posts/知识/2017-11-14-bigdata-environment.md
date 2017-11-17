@@ -124,7 +124,9 @@ $ chmod 600 .ssh/authorized_keys
 
 
 ## hive安装
-### 步骤
+#### 1. 安装mysql并且创建hive用户及hive数据库
+
+
 ### 遇到问题
 1. MySQL添加新用户出现mysql]ERROR 1364 (HY000): Field 'ssl_cipher' doesn't have a default value
 >解决： grant usage on *.* to 'username'@'hostname' identified by 'passwd' with grant option;  //添加用户    
