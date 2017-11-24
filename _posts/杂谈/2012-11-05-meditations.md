@@ -193,6 +193,8 @@ ________________________________________________________________________________
 
 2015.2.18:Steve Jobs说: Life can be much broader once you discover one simple fact: Everything around you that you call life was made up by people that were no smarter than you and you can change it, you can inf luence it, you can build your own things that other people can use. Once you learn that, you'll never be the same again 。
 
+2015.2.23: "后来我问他当时怎么想的，他说，没怎么想，当你在乎一个人的时候，你就变得勇敢了。"  —— some where
+
 2015.3.15：“很多人都会说：事情都是说说容易做起来难，其实真正的问题不是难不难？而是你有没有去做？” ——form知乎
 
 2015.3.15:从今天开始，做自己，做想做的事情，做好。
@@ -248,3 +250,5 @@ ________________________________________________________________________________
 2017.10.15: 缺点：做事不够坚定，遇到困难畏惧心理严重。
 
 2017.10.16: 在事态不乐观的时候保持前进的动力，这个是人的核心竞争力
+
+2017.11.21: 改变心态，不是为了工作而工作，而是为了自己而工作

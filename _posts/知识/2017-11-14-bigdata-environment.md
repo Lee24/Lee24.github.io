@@ -122,10 +122,15 @@ $ chmod 600 .ssh/authorized_keys
 - **查看hdfs集群情况**    
 > hdfs dfsadmin -report
 
+- **端口**
+> 50070 hdfs监控端口   
+> 8088 yarn默认web端口
+
 
 ## hive安装
 #### 1. 安装mysql并且创建hive用户及hive数据库
-
+#### 2. 下载hive包，解压并添加HIVE_HOME环境标量，把bin目录加到path中
+#### 3.
 
 ### 遇到问题
 1. MySQL添加新用户出现mysql]ERROR 1364 (HY000): Field 'ssl_cipher' doesn't have a default value
@@ -135,6 +140,7 @@ flush privileges; //更新权限
 
 
 ## spark安装
+8080 spark默认web端口
 
 
 ## sqoop安装
